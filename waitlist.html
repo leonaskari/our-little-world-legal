@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The waitlist · Our Tiny Planet</title>
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#110a18">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=20261026">
+</head>
+<!-- data-waitlist: the Supabase project whose waitlist function the buttons call (as on index.html). -->
+<body data-waitlist="erblsrbrwzqdgwsljslz">
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+<header class="top">
+  <a class="brand" href="./"><img src="favicon.png" alt="" width="30" height="30">Our Tiny Planet</a>
+</header>
+<main>
+  <section class="wl-page" data-state="unknown">
+    <div class="card">
+      <img class="planet small" src="img/icon.png?v=20261025" alt="" width="112" height="112">
+      <div data-for="confirm">
+        <h1>Confirm you'd like to hear when Our Tiny Planet is out</h1>
+        <p>One tap, and we'll send you one email, on the day it's out.</p>
+        <button type="button" class="badge" data-action="confirm">Yes, tell me when it's out</button>
+      </div>
+      <div data-for="unsubscribe">
+        <h1>Leave the list?</h1>
+        <p>We won't email you about Our Tiny Planet again.</p>
+        <button type="button" class="badge" data-action="unsubscribe">Take me off the list</button>
+      </div>
+      <div data-for="confirmed">
+        <h1>You're on the list</h1>
+        <p>Thank you. We'll send you one email, on the day Our Tiny Planet is out. Until then, keep looking up.</p>
+      </div>
+      <div data-for="left">
+        <h1>You're off the list</h1>
+        <p>We won't email you again. If you change your mind, you can always sign up again on our home page.</p>
+      </div>
+      <div data-for="unknown">
+        <h1>That link didn't work</h1>
+        <p>It may have been copied only in part, or the address has since left the list. You can sign up again on our home page, or write to us at <a href="mailto:hello@ourtinyplanet.com">hello@ourtinyplanet.com</a>.</p>
+      </div>
+      <p class="wl-msg" role="status" aria-live="polite"></p>
+      <a class="ghost" href="./" data-home>Back to Our Tiny Planet</a>
+    </div>
+  </section>
+</main>
+<script>
+  // The links in our emails land here: ?confirm=<token> or ?unsubscribe=<token>.
+  // Opening the page changes nothing (mail scanners open links too); only the
+  // button does. ?state=confirmed, left or unknown just shows that message.
+  (() => {
+    const box = document.querySelector('.wl-page');
+    const msg = box.querySelector('.wl-msg');
+    const q = new URLSearchParams(location.search);
+    const show = (state) => { box.dataset.state = state; msg.textContent = ''; };
+    const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    const action = q.has('confirm') ? 'confirm' : q.has('unsubscribe') ? 'unsubscribe' : null;
+    const token = action && q.get(action);
+    if (action) show(uuid.test(token) ? action : 'unknown');
+    else if (['confirmed', 'left', 'unknown'].includes(q.get('state'))) show(q.get('state'));
+    // Keep the token out of the address bar and history once read.
+    if (action) history.replaceState(null, '', location.pathname);
+
+    const endpoint = `https://${document.body.dataset.waitlist}.supabase.co/functions/v1/waitlist`;
+    box.querySelectorAll('button[data-action]').forEach((b) => b.addEventListener('click', async () => {
+      b.disabled = true;
+      msg.textContent = '';
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ [b.dataset.action]: token }),
+        });
+        const out = await res.json().catch(() => ({}));
+        show(res.ok ? out.status : 'unknown');
+      } catch {
+        msg.textContent = "We couldn't reach our server. Please check your connection and try again.";
+      } finally {
+        b.disabled = false;
+      }
+    }));
+  })();
+</script>
+</body>
+</html>

@@ -358,3 +358,99 @@ h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; text-wrap: balance
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal, .js .phones .phone { opacity: 1; transform: none; }
 }
+
+/* ---------------------------------------------------------------- the waitlist
+   "Be the first to know": the same form under the hero and at the end. */
+.waitlist {
+  max-width: 540px;
+  margin: 34px auto 0;
+  padding: 22px clamp(18px, 4vw, 28px) 18px;
+  border-radius: 28px;
+  background: #2a1d3acc;
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 50px #00000059;
+  text-align: center;
+  position: relative;
+}
+html:not(.js) .waitlist { display: none; }
+.waitlist .wl-title { margin: 0; font-size: clamp(22px, 3.4vw, 26px); }
+.wl-sub { margin: 6px 0 16px; color: var(--muted); font-size: 16px; }
+.wl-row {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 999px;
+  background: var(--space-deep);
+  border: 1.5px solid var(--line);
+  transition: border-color .2s, box-shadow .2s;
+}
+.wl-row:focus-within { border-color: var(--gold); box-shadow: 0 0 0 4px #e0b06033; }
+.wl-label, .wl-hp { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.wl-row input[type=email] {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  border: 0;
+  background: transparent;
+  color: var(--star);
+  font: inherit;
+  font-size: 17px;
+  outline: none;
+}
+.wl-row input::placeholder { color: #cbbdd680; }
+.wl-row button {
+  flex: 0 0 auto;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--space);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: filter .2s, transform .2s var(--ease);
+}
+.wl-row button:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.wl-row button:focus-visible { outline: 2px solid var(--star); outline-offset: 2px; }
+.wl-row button:disabled { opacity: .7; cursor: wait; }
+.wl-msg { margin: 10px 0 0; font-weight: 700; font-size: 15px; }
+.wl-msg:empty { display: none; }
+.waitlist[data-state=error] .wl-msg { color: var(--rose); }
+.waitlist[data-state=error] .wl-row { border-color: var(--rose); }
+.waitlist[data-state=busy] .wl-msg { color: var(--muted); }
+.waitlist[data-state=done] .wl-row { display: none; }
+.waitlist[data-state=done] .wl-msg {
+  margin: 4px 0 0;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: #3fa8841f;
+  border: 1px solid #3fa88466;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 16px;
+}
+.waitlist[data-state=done] .wl-msg strong { display: block; color: var(--star); font-size: 18px; font-weight: 800; }
+.wl-fine { margin: 12px 0 0; color: var(--muted); font-size: 13px; opacity: .85; }
+.wl-fine a { color: var(--muted); }
+.finale .waitlist { margin-top: 22px; }
+@media (max-width: 359px) {
+  .wl-row { flex-direction: column; border-radius: 22px; }
+  .wl-row input[type=email] { text-align: center; }
+  .wl-row button { width: 100%; }
+}
+
+/* The page the links in the emails lead to (waitlist.html). */
+.wl-page { min-height: calc(100vh - 70px); display: grid; place-items: center; text-align: center; padding: 40px 0; }
+.wl-page .card { max-width: 520px; padding: 36px clamp(20px, 5vw, 40px); }
+.wl-page h1 { font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: clamp(34px, 7vw, 46px); line-height: 1.1; margin: 0 0 12px; }
+.wl-page p { color: var(--muted); margin: 0 0 14px; }
+.wl-page .badge { margin: 8px 0 6px; border: 0; font: inherit; font-weight: 800; cursor: pointer; }
+.wl-page .badge:disabled { opacity: .7; cursor: wait; }
+.wl-page .ghost { margin-top: 12px; }
+.wl-page .wl-msg:not(:empty) { color: var(--rose); }
+.wl-page [data-for] { display: none; }
+.wl-page[data-state=confirm] [data-for=confirm],
+.wl-page[data-state=unsubscribe] [data-for=unsubscribe],
+.wl-page[data-state=confirmed] [data-for=confirmed],
+.wl-page[data-state=left] [data-for=left],
+.wl-page[data-state=unknown] [data-for=unknown] { display: block; }
