@@ -135,9 +135,9 @@
   stories.forEach((s) => reading.observe(s));
 
   // ------------------------------------------------------------ the lands
-  const carousel = document.querySelector('.carousel');
   document.querySelectorAll('.carousel-nav button').forEach((b) =>
     b.addEventListener('click', () => {
+      const carousel = b.closest('section').querySelector('.carousel');
       const step = carousel.querySelector('figure').getBoundingClientRect().width + 18;
       carousel.scrollBy({ left: step * Number(b.dataset.dir), behavior: still ? 'auto' : 'smooth' });
     }));

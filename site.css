@@ -83,7 +83,7 @@ img { max-width: 100%; height: auto; }
 .top nav .pill { color: var(--space); background: var(--gold); padding: 8px 16px; border-radius: 999px; }
 .top nav .pill:hover { color: var(--space); filter: brightness(1.08); }
 
-main { max-width: 1120px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px); }
+main { max-width: 1120px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px); overflow-x: clip; }
 section { padding: clamp(56px, 9vw, 110px) 0; }
 h2 {
   font-family: Fraunces, Georgia, serif;
@@ -189,7 +189,8 @@ h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; text-wrap: balance
 @keyframes scroll { to { transform: translateX(-50%); } }
 
 /* Numbers. */
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; padding-top: 30px; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-top: 30px; }
+@media (max-width: 720px) { .stats { grid-template-columns: repeat(2, 1fr); gap: 12px; } .stat { padding: 22px 12px; } }
 .stat { text-align: center; padding: 26px 18px; border-radius: 24px; background: #2a1d3a99; border: 1px solid var(--line); }
 .stat b {
   display: block;
@@ -235,7 +236,7 @@ h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; text-wrap: balance
 .tour-grid { display: grid; grid-template-columns: minmax(260px, 380px) 1fr; gap: clamp(30px, 6vw, 90px); align-items: start; }
 .tour-phone { position: sticky; top: 100px; }
 /* Never taller than the window, so the whole phone is always in view. */
-.tour-phone .phone { width: min(100%, 340px, calc((100vh - 150px) * 600 / 1304)); margin: 0 auto; aspect-ratio: 600 / 1304; }
+.tour-phone .phone { width: min(100%, 340px, calc((100vh - 150px) * 600 / 1229)); margin: 0 auto; aspect-ratio: 600 / 1229; }
 .tour-phone .phone img {
   position: absolute;
   inset: clamp(5px, .9vw, 10px);
@@ -267,6 +268,8 @@ h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; text-wrap: balance
 /* Just the land: the middle of the screenshot, as a card. */
 .carousel img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 52%; border-radius: 26px; box-shadow: 0 24px 48px #00000080, 0 0 0 1px #ffffff1a; display: block; }
 .carousel figcaption { margin-top: 12px; font-family: Fraunces, Georgia, serif; font-size: 20px; }
+/* Games: the board, not the top bar. */
+.games .carousel img { object-position: 50% 45%; }
 .carousel-nav { display: flex; justify-content: center; gap: 12px; }
 .carousel-nav button {
   width: 48px;
