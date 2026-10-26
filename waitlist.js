@@ -43,10 +43,10 @@
           }),
         });
         const out = await res.json().catch(() => ({}));
-        if (res.ok && out.status === 'confirmed') {
+        if (res.ok && out.status === 'on') {
           say("We'll email you the day it's out.", 'done', "You're already on the list.");
         } else if (res.ok) {
-          say(`We've sent a link to ${email}.`, 'done', 'Check your inbox to confirm.');
+          say("We'll email you the day it's out.", 'done', "You're on the list!");
         } else {
           say(out.error || 'Something went wrong. Please try again in a minute.', 'error');
         }
