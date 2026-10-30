@@ -95,6 +95,9 @@
   }, { passive: true });
 
   // ------------------------------------------------------------ things coming into view
+  // Numbers as the page's language writes them, in Latin digits like the rest of the page.
+  let numbers = 'en-GB';
+  try { numbers = Intl.NumberFormat.supportedLocalesOf(`${document.documentElement.lang}-u-nu-latn`)[0] || numbers; } catch { /* keep en-GB */ }
   const counted = new WeakSet();
   function count(el) {
     if (counted.has(el)) return;
@@ -105,7 +108,7 @@
     const tick = (t) => {
       const p = Math.min(1, (t - t0) / 1600);
       const v = Math.round(end * (1 - Math.pow(1 - p, 3)));
-      el.textContent = v.toLocaleString('en-GB') + (plus && p === 1 ? '+' : '');
+      el.textContent = v.toLocaleString(numbers) + (plus && p === 1 ? '+' : '');
       if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
@@ -135,11 +138,13 @@
   stories.forEach((s) => reading.observe(s));
 
   // ------------------------------------------------------------ the lands
+  // Right to left (Arabic), "next" runs leftwards.
+  const forward = getComputedStyle(document.documentElement).direction === 'rtl' ? -1 : 1;
   document.querySelectorAll('.carousel-nav button').forEach((b) =>
     b.addEventListener('click', () => {
       const carousel = b.closest('section').querySelector('.carousel');
       const step = carousel.querySelector('figure').getBoundingClientRect().width + 18;
-      carousel.scrollBy({ left: step * Number(b.dataset.dir), behavior: still ? 'auto' : 'smooth' });
+      carousel.scrollBy({ left: step * Number(b.dataset.dir) * forward, behavior: still ? 'auto' : 'smooth' });
     }));
 
   // ------------------------------------------------------------ hearts rising at the end
