@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="tr" data-lang="tr" data-page="tools-halfway">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>İki şehrin ortası: orta nokta bulma ve yarı yol bulucu</title>
+<meta name="description" content="Sevgilinle aranızdaki orta noktayı bul: ona en yakın büyük şehirler (denize düşüyorsa hangi deniz) ve buluşmak için en adil şehir. Ücretsiz.">
+<!-- seo -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Our Tiny Planet">
+<meta property="og:title" content="İki şehrin ortası: orta nokta bulma ve yarı yol bulucu">
+<meta property="og:description" content="Sevgilinle aranızdaki orta noktayı bul: ona en yakın büyük şehirler (denize düşüyorsa hangi deniz) ve buluşmak için en adil şehir. Ücretsiz.">
+<meta property="og:url" content="https://ourtinyplanet.com/tr/tools/halfway.html">
+<meta property="og:image" content="https://ourtinyplanet.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Our Tiny Planet: a tiny planet for the two of you, wherever you are">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="İki şehrin ortası: orta nokta bulma ve yarı yol bulucu">
+<meta name="twitter:description" content="Sevgilinle aranızdaki orta noktayı bul: ona en yakın büyük şehirler (denize düşüyorsa hangi deniz) ve buluşmak için en adil şehir. Ücretsiz.">
+<meta name="twitter:image" content="https://ourtinyplanet.com/img/og.png">
+<meta name="twitter:image:alt" content="Our Tiny Planet: a tiny planet for the two of you, wherever you are">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Yarı yol noktanızı bulun","url":"https://ourtinyplanet.com/tr/tools/halfway.html","description":"Sevgilinle aranızdaki orta noktayı bul: ona en yakın büyük şehirler (denize düşüyorsa hangi deniz) ve buluşmak için en adil şehir. Ücretsiz.","applicationCategory":"TravelApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"tr","image":"https://ourtinyplanet.com/img/og.png","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"publisher":{"@type":"Organization","name":"Our Tiny Planet","url":"https://ourtinyplanet.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana sayfa","item":"https://ourtinyplanet.com/tr/"},{"@type":"ListItem","position":2,"name":"Araçlar","item":"https://ourtinyplanet.com/tr/tools/"},{"@type":"ListItem","position":3,"name":"Yarı yol noktanızı bulun","item":"https://ourtinyplanet.com/tr/tools/halfway.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"tr","mainEntity":[{"@type":"Question","name":"Yarı yol noktamız denizdeyse ne olacak?","acceptedAnswer":{"@type":"Answer","text":"Bu çok sık olur, çünkü Dünya'nın büyük kısmı su. Örneğin Londra ile New York'un orta noktası Kuzey Atlas Okyanusu'nun ortasındadır. En yakın büyük şehirleri ve buluşmak için en adil şehri gösteririz; bunlar zaten daha işe yarar."}},{"@type":"Question","name":"En adil şehir nasıl seçiliyor?","acceptedAnswer":{"@type":"Answer","text":"Yoğun havalimanı olan büyük şehirlerin listesinden, ikinizin düz çizgi yolculuklarından uzun olanının en kısa kaldığı şehri seçeriz. Birbirinize oldukça yakın yaşıyorsanız listemizdeki bütün şehirleri kullanırız."}},{"@type":"Question","name":"Yarı yol noktası, yolculuk süresinin yarısı mı demek?","acceptedAnswer":{"@type":"Answer","text":"Hayır. Mesafenin yarısıdır. Yolculuk süresi uçuşlara, aktarmalara ve havalimanlarının nerede olduğuna bağlıdır; yani saat olarak adil olan yer farklı olabilir."}},{"@type":"Question","name":"Yarı yol noktamızı paylaşabilir miyim?","acceptedAnswer":{"@type":"Answer","text":"Evet. \"Bağlantıyı kopyala\", bu sayfayı iki şehir de dolu olarak açan bir bağlantı oluşturur. Bizim tarafımızda hiçbir şey kaydedilmez: şehirler bağlantının kendisindedir."}}]}</script>
+<!-- /seo -->
+<meta name="theme-color" content="#110a18">
+<link rel="icon" href="../../favicon.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- fonts --><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap"></noscript><!-- /fonts -->
+<link rel="stylesheet" href="../../site.css?v=20261103">
+<link rel="stylesheet" href="../../tools/tools.css?v=20261104">
+<script>document.documentElement.classList.add('js');</script>
+<!-- lang:head -->
+<link rel="canonical" href="https://ourtinyplanet.com/tr/tools/halfway.html">
+<link rel="alternate" hreflang="en" href="https://ourtinyplanet.com/tools/halfway.html">
+<link rel="alternate" hreflang="ja" href="https://ourtinyplanet.com/ja/tools/halfway.html">
+<link rel="alternate" hreflang="de" href="https://ourtinyplanet.com/de/tools/halfway.html">
+<link rel="alternate" hreflang="fr" href="https://ourtinyplanet.com/fr/tools/halfway.html">
+<link rel="alternate" hreflang="es" href="https://ourtinyplanet.com/es/tools/halfway.html">
+<link rel="alternate" hreflang="pt" href="https://ourtinyplanet.com/pt/tools/halfway.html">
+<link rel="alternate" hreflang="ar" href="https://ourtinyplanet.com/ar/tools/halfway.html">
+<link rel="alternate" hreflang="ko" href="https://ourtinyplanet.com/ko/tools/halfway.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://ourtinyplanet.com/zh-hant/tools/halfway.html">
+<link rel="alternate" hreflang="it" href="https://ourtinyplanet.com/it/tools/halfway.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://ourtinyplanet.com/zh-hans/tools/halfway.html">
+<link rel="alternate" hreflang="tr" href="https://ourtinyplanet.com/tr/tools/halfway.html">
+<link rel="alternate" hreflang="id" href="https://ourtinyplanet.com/id/tools/halfway.html">
+<link rel="alternate" hreflang="ru" href="https://ourtinyplanet.com/ru/tools/halfway.html">
+<link rel="alternate" hreflang="pl" href="https://ourtinyplanet.com/pl/tools/halfway.html">
+<link rel="alternate" hreflang="th" href="https://ourtinyplanet.com/th/tools/halfway.html">
+<link rel="alternate" hreflang="vi" href="https://ourtinyplanet.com/vi/tools/halfway.html">
+<link rel="alternate" hreflang="nl" href="https://ourtinyplanet.com/nl/tools/halfway.html">
+<link rel="alternate" hreflang="sv" href="https://ourtinyplanet.com/sv/tools/halfway.html">
+<link rel="alternate" hreflang="da" href="https://ourtinyplanet.com/da/tools/halfway.html">
+<link rel="alternate" hreflang="nb" href="https://ourtinyplanet.com/nb/tools/halfway.html">
+<link rel="alternate" hreflang="no" href="https://ourtinyplanet.com/nb/tools/halfway.html">
+<link rel="alternate" hreflang="fi" href="https://ourtinyplanet.com/fi/tools/halfway.html">
+<link rel="alternate" hreflang="uk" href="https://ourtinyplanet.com/uk/tools/halfway.html">
+<link rel="alternate" hreflang="x-default" href="https://ourtinyplanet.com/tools/halfway.html">
+<script src="../../lang.js?v=1"></script>
+<!-- /lang:head -->
+</head>
+<body data-waitlist="erblsrbrwzqdgwsljslz">
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+<a class="skip" href="#tool">Araca geç</a>
+
+<header class="top">
+  <a class="brand" href="../"><img src="../../favicon.png" alt="" width="30" height="30">Our Tiny Planet</a>
+  <nav aria-label="Ana menü">
+    <a href="./">Tüm araçlar</a><a href="distance.html">Mesafe</a><a href="halfway.html" aria-current="page">Yarı yol</a><a href="time-zones.html">Saat dilimleri</a><a href="countdown.html">Geri sayım</a>
+    <a class="pill" href="#app">Uygulama</a>
+  </nav>
+  <!-- lang:switcher --><details class="lang"><summary aria-label="Dil: Türkçe"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9M12 3C9.5 5.5 8.2 8.5 8.2 12s1.3 6.5 3.8 9"/></svg><span class="lang-name">Türkçe</span></summary><ul aria-label="Dil"><li><a href="../../tools/halfway.html" hreflang="en" lang="en-GB" dir="ltr" data-l="en">English</a></li><li><a href="../../ja/tools/halfway.html" hreflang="ja" lang="ja" dir="ltr" data-l="ja">日本語</a></li><li><a href="../../de/tools/halfway.html" hreflang="de" lang="de" dir="ltr" data-l="de">Deutsch</a></li><li><a href="../../fr/tools/halfway.html" hreflang="fr" lang="fr" dir="ltr" data-l="fr">Français</a></li><li><a href="../../es/tools/halfway.html" hreflang="es" lang="es-419" dir="ltr" data-l="es">Español (Latinoamérica)</a></li><li><a href="../../pt/tools/halfway.html" hreflang="pt" lang="pt-BR" dir="ltr" data-l="pt">Português (Brasil)</a></li><li><a href="../../ar/tools/halfway.html" hreflang="ar" lang="ar" dir="rtl" data-l="ar">العربية</a></li><li><a href="../../ko/tools/halfway.html" hreflang="ko" lang="ko" dir="ltr" data-l="ko">한국어</a></li><li><a href="../../zh-hant/tools/halfway.html" hreflang="zh-Hant" lang="zh-Hant" dir="ltr" data-l="zh-hant">繁體中文</a></li><li><a href="../../it/tools/halfway.html" hreflang="it" lang="it" dir="ltr" data-l="it">Italiano</a></li><li><a href="../../zh-hans/tools/halfway.html" hreflang="zh-Hans" lang="zh-Hans" dir="ltr" data-l="zh-hans">简体中文</a></li><li><a href="halfway.html" hreflang="tr" lang="tr" dir="ltr" data-l="tr" aria-current="true">Türkçe</a></li><li><a href="../../id/tools/halfway.html" hreflang="id" lang="id" dir="ltr" data-l="id">Bahasa Indonesia</a></li><li><a href="../../ru/tools/halfway.html" hreflang="ru" lang="ru" dir="ltr" data-l="ru">Русский</a></li><li><a href="../../pl/tools/halfway.html" hreflang="pl" lang="pl" dir="ltr" data-l="pl">Polski</a></li><li><a href="../../th/tools/halfway.html" hreflang="th" lang="th" dir="ltr" data-l="th">ไทย</a></li><li><a href="../../vi/tools/halfway.html" hreflang="vi" lang="vi" dir="ltr" data-l="vi">Tiếng Việt</a></li><li><a href="../../nl/tools/halfway.html" hreflang="nl" lang="nl" dir="ltr" data-l="nl">Nederlands</a></li><li><a href="../../sv/tools/halfway.html" hreflang="sv" lang="sv" dir="ltr" data-l="sv">Svenska</a></li><li><a href="../../da/tools/halfway.html" hreflang="da" lang="da" dir="ltr" data-l="da">Dansk</a></li><li><a href="../../nb/tools/halfway.html" hreflang="nb" lang="nb" dir="ltr" data-l="nb">Norsk</a></li><li><a href="../../fi/tools/halfway.html" hreflang="fi" lang="fi" dir="ltr" data-l="fi">Suomi</a></li><li><a href="../../uk/tools/halfway.html" hreflang="uk" lang="uk" dir="ltr" data-l="uk">Українська</a></li></ul></details><!-- /lang:switcher -->
+</header>
+
+<main class="tool-page">
+  <nav class="crumbs" aria-label="Sayfa yolu"><ol><li><a href="../">Ana sayfa</a></li><li><a href="./">Araçlar</a></li><li aria-current="page">Yarı yol noktanızı bulun</li></ol></nav>
+  <header class="tool-head">
+    <p class="kicker">Ücretsiz araç · Yarı yol noktası</p>
+    <h1>Yarı yol noktanızı bulun</h1>
+    <p class="intro">İki şehrinizi de girin. Aranızdaki tam orta noktayı, ona en yakın büyük şehirleri ve buluşmak için en adil şehri bulalım.</p>
+  </header>
+
+  <section id="tool" class="tool-card" aria-label="Yarı yol bulucu">
+    <div class="fields pair">
+      <div class="field">
+        <label for="a"><span class="dot-a" aria-hidden="true"></span>Senin şehrin</label>
+        <div class="combo">
+          <input id="a" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="a-list" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Bir şehir yazmaya başla" aria-describedby="a-hint">
+          <ul id="a-list" role="listbox" aria-label="Şehirler" hidden></ul>
+        </div>
+        <p class="hint" id="a-hint">Kasaban listede yok mu? En yakın büyük şehri seç.</p>
+      </div>
+      <button type="button" class="btn-ghost swap" id="swap" aria-label="İki şehrin yerini değiştir"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 4 3 8l4 4M3 8h13M17 12l4 4-4 4M21 16H8"/></svg></button>
+      <div class="field">
+        <label for="b"><span class="dot-b" aria-hidden="true"></span>Sevgilinin şehri</label>
+        <div class="combo">
+          <input id="b" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="b-list" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Bir şehir yazmaya başla" aria-describedby="b-hint">
+          <ul id="b-list" role="listbox" aria-label="Şehirler" hidden></ul>
+        </div>
+        <p class="hint" id="b-hint">Birkaç harf yaz, sonra listeden seç.</p>
+      </div>
+    </div>
+    <p class="empty" id="empty" data-text="Yarı yol noktanızı bulmak için iki şehri de seç.">Yarı yol noktanızı bulmak için iki şehri de seç.</p>
+    <div class="results" id="result" hidden aria-live="polite">
+      <p class="headline" id="headline"></p>
+      <p id="where"></p>
+      <h2 id="near-title">Yarı yol noktasına en yakın büyük şehirler</h2>
+      <ul class="places" id="near"></ul>
+      <h2>Buluşmak için en adil şehir</h2>
+      <p id="fair-why"></p>
+      <ul class="places" id="fair"></ul>
+      <p class="share-line" id="line"></p>
+      <div class="actions">
+          <button type="button" class="btn" id="copy"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg><span>Bağlantıyı kopyala</span></button>
+          <button type="button" class="btn-ghost" id="share" hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12M8 7l4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg><span>Paylaş</span></button>
+        </div>
+    </div>
+    <figure class="map"><canvas id="map" aria-hidden="true"></canvas><figcaption id="map-caption" data-text="Kalp, yarı yol noktanızı gösterir.">Kalp, yarı yol noktanızı gösterir.</figcaption></figure>
+  </section>
+
+  <article class="guide">
+    <h2>Yarı yol noktası nasıl bulunuyor?</h2>
+    <p>Yarı yol noktası, iki şehir merkeziniz arasında Dünya üzerinden geçen en kısa yolun üstündedir ve ikinize de aynı uzaklıktadır. Dünya yuvarlak olduğu için çoğu zaman düz bir haritanın gösterdiği yerde değildir. Avrupa'nın ve Kuzey Amerika'nın kuzeydeki şehirleri arasındaki rotalar kuzeye doğru kıvrılır; bu yüzden onların yarı yol noktaları genellikle tahmin ettiğinden daha kuzeydedir.</p>
+    <p>Gezegenin büyük kısmı su olduğundan pek çok yarı yol noktası denize düşer. Seninki de öyleyse bunu açıkça söyler, onun yerine en yakın büyük şehirleri gösteririz.</p>
+
+    <h2>Buluşmak için en adil şehir</h2>
+    <p>Tam orta nokta nadiren uçakla gidebileceğin bir yerdir. Bu yüzden yoğun havalimanı olan büyük şehirlerin listesine de bakar ve ikinizin yolculuğundan uzun olanını olabildiğince kısa tutan şehri seçeriz. Böylece yolun hepsini biriniz yapmaz. Birbirinize daha yakın yaşıyorsanız listemizdeki her şehre bakarız.</p>
+    <p>Ölçüm düz çizgilerle yapılır, uçuş süreleri ya da bilet fiyatlarıyla değil. İkinizden de aktarmasız uçuşu olan bir şehir, biraz daha yakın olan bir şehirden daha iyi olabilir; bilet almadan önce gerçek rotalara ve fiyatlara bakın.</p>
+
+    <h2>Ortada buluşmak için ipuçları</h2>
+    <ul>
+      <li><strong>Kapıdan kapıya süreleri karşılaştırın.</strong> Biraz daha uzun ama aktarmasız bir uçuş, çoğu zaman iki kısa uçuştan daha az yorar.</li>
+      <li><strong>İki pasaportu da kontrol edin.</strong> Haritadaki en adil şehir biriniz için vize gerektirip diğeriniz için gerektirmeyebilir.</li>
+      <li><strong>Yakın saatlerde inin.</strong> Birbirine birkaç saat arayla inen uçuşlar seçin ki kimse havalimanında bütün gün tek başına beklemesin.</li>
+      <li><strong>Sırayla yapın.</strong> Bir kez yarı yolda, sonra onun şehrinde, ardından seninkinde. Böylece masraf da yorgunluk da eşit kalır.</li>
+    </ul>
+    <p>Önce tam mesafeyi mi görmek istiyorsun? <a href="distance.html">Aranızdaki mesafeye</a> bak, yolculuk ayarlanınca da bir <a href="countdown.html">geri sayım</a> başlat.</p>
+  </article>
+
+  <section class="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Sık sorulan sorular</h2>
+    <details><summary>Yarı yol noktamız denizdeyse ne olacak?</summary><p>Bu çok sık olur, çünkü Dünya'nın büyük kısmı su. Örneğin Londra ile New York'un orta noktası Kuzey Atlas Okyanusu'nun ortasındadır. En yakın büyük şehirleri ve buluşmak için en adil şehri gösteririz; bunlar zaten daha işe yarar.</p></details>
+    <details><summary>En adil şehir nasıl seçiliyor?</summary><p>Yoğun havalimanı olan büyük şehirlerin listesinden, ikinizin düz çizgi yolculuklarından uzun olanının en kısa kaldığı şehri seçeriz. Birbirinize oldukça yakın yaşıyorsanız listemizdeki bütün şehirleri kullanırız.</p></details>
+    <details><summary>Yarı yol noktası, yolculuk süresinin yarısı mı demek?</summary><p>Hayır. Mesafenin yarısıdır. Yolculuk süresi uçuşlara, aktarmalara ve havalimanlarının nerede olduğuna bağlıdır; yani saat olarak adil olan yer farklı olabilir.</p></details>
+    <details><summary>Yarı yol noktamızı paylaşabilir miyim?</summary><p>Evet. "Bağlantıyı kopyala", bu sayfayı iki şehir de dolu olarak açan bir bağlantı oluşturur. Bizim tarafımızda hiçbir şey kaydedilmez: şehirler bağlantının kendisindedir.</p></details>
+  </section>
+
+  <section class="more" aria-labelledby="more-title">
+    <h2 id="more-title">İkiniz için başka ücretsiz araçlar</h2>
+    <ul class="tool-grid"><li><a class="tool-link" href="distance.html"><span class="ico"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M5 17c4-9 10-9 14 0"/><circle cx="5" cy="17" r="2.2" fill="currentColor"/><circle cx="19" cy="17" r="2.2" fill="currentColor"/></svg></span><span><b>Aranızdaki mesafe</b><span>Senin şehrinle onunki arasındaki mesafe, kilometre ve mil olarak, yaklaşık uçuş süresiyle.</span></span></a></li><li><a class="tool-link" href="time-zones.html"><span class="ico"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="9" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M9 9v3l2 1.5M16.5 6.6A6 6 0 0 1 16.5 17.4"/></svg></span><span><b>Saat dilimi planlayıcı</b><span>Farklı saat dilimlerinde uyanık saatleriniz yan yana, bir de aramak için en iyi saat.</span></span></a></li><li><a class="tool-link" href="countdown.html"><span class="ico"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 3h10M7 21h10M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9"/></svg></span><span><b>Bir sonraki buluşmaya geri sayım</b><span>Birlikte olacağınız ana kalan günler, saatler, dakikalar ve saniyeler; paylaşmak için bir bağlantıyla.</span></span></a></li></ul>
+  </section>
+
+  <section id="app" class="app-cta" aria-labelledby="app-title">
+    <img class="planet small" src="../../img/icon.png?v=20261025" alt="" width="88" height="88" loading="lazy">
+    <h2 id="app-title">Our Tiny Planet bunu her gün yapıyor</h2>
+    <p>Apple Health ya da Health Connect'i bağla; adımların seni gerçek rota boyunca onun şehrine taşısın, haritada ikiniz de birbirinize doğru yürürken. Hayalini kurduğunuz yolculukları planlayın ve bir sonraki buluşmanız için birlikte biriktirin.</p>
+    <p>Our Tiny Planet, yakın ya da uzak tüm çiftler için minik, ortak bir dünya: birlikte bir ev kurun, oynayın, birbirinize yazın ve birbirinizin gününde olun. iPhone ve Android için çok yakında.</p>
+    <div class="links"><a class="btn-ghost" href="../">İçeriye bir göz at</a></div>
+    <form class="waitlist" id="waitlist-app" data-source="tools-halfway" aria-labelledby="wl-title-app" novalidate>
+      <h3 class="wl-title" id="wl-title-app">İlk sen haberdar ol</h3>
+      <p class="wl-sub">E-posta adresini bırak, Our Tiny Planet çıktığı gün sana tek bir e-posta gönderelim.</p>
+      <div class="wl-row">
+        <label class="wl-label" for="wl-email-app">E-posta adresin</label>
+        <input id="wl-email-app" type="email" name="email" autocomplete="email" inputmode="email" placeholder="E-posta adresin" required aria-describedby="wl-msg-app">
+        <input class="wl-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit">Haber ver</button>
+      </div>
+      <p class="wl-msg" id="wl-msg-app" role="status" aria-live="polite"></p>
+      <p class="wl-fine">Yalnızca çıkış e-postası, sonra adresini sileriz. <a href="../privacy.html#waitlist">Gizlilik</a></p>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <img src="../../favicon.png" alt="" width="34" height="34">
+  <p><span class="heart" aria-hidden="true">♥</span> Our Tiny Planet · ikiniz için yapıldı</p>
+  <nav aria-label="Daha fazla"><a href="../guides/">Rehberler</a><a href="./">Ücretsiz araçlar</a></nav>
+  <nav aria-label="Site"><a href="../privacy.html">Gizlilik</a><a href="../terms.html">Koşullar</a><a href="../support.html">Destek</a></nav>
+  <p class="small">© 2026 Our Tiny Planet</p>
+</footer>
+<script type="application/json" id="tool-text">{"ui":{"city_label":"{city}, {country}","place_in":"{country} sınırları içinde","search_found":{"one":"{n} şehir bulundu. Seçmek için ok tuşlarını kullan.","other":"{n} şehir bulundu. Seçmek için ok tuşlarını kullan."},"search_none":"Şehir bulunamadı. En yakın büyük şehri dene.","copied":"Bağlantı kopyalandı","copy_failed":"Kopyalanamadı: adres çubuğundan kopyala","send":"Bunu sevgiline gönder","dur_hm":"{h} sa {m} dk","dur_h_m":"{h} {m}","coord":"{lat}° {ns}, {lon}° {ew}","north":"K","south":"G","east":"D","west":"B","same_city":"Aynı şehri iki kez seçtin. Her birinizin nerede olduğunu seç.","next_day":" (ertesi gün)","day_before":" (bir gün önce)","d_sub":"{a} ile {b} arası kuş uçuşu {other}","d_fly_short_title":"Karayolu daha hızlı","d_fly_short":"Uçakla havada yaklaşık {time} geçer, ama havalimanlarını da sayınca tren ya da araba muhtemelen daha hızlı.","d_fly_long_title":"Yaklaşık {time}","d_fly_long":"havada. Bu, neredeyse hiçbir uçağın aktarmasız uçamayacağı kadar uzun; yolda bir aktarma hesaba katın.","d_fly_title":"Yaklaşık {time}","d_fly":"uçuş süresi, varsa aktarmasız bir uçuşla","d_same_time_title":"Aynı saat","d_same_time":"{a} ve {b} şu an aynı saatte","d_ahead_title":"{gap} ileri","d_behind_title":"{gap} geri","d_ahead":"{b} saati şu an {a} saatinden ileri.","d_behind":"{b} saati şu an {a} saatinden geri.","d_plan":"Aramalarınızı planlayın","d_walk_title_days":{"one":"Yaklaşık {n} gün","other":"Yaklaşık {n} gün"},"d_walk_title_time":"Yaklaşık {time}","d_walk_short":"yürüyerek, rahat bir tempoda","d_walk":"yürüyerek, günde 8 saat, baştan sona bir yol olsaydı","d_line":"{a} ile {b} arası: {first} ({second}).","d_share_title":"Aramızda ne kadar mesafe var?","d_share_more":"Sizin aranızda ne kadar var?","d_caption":"{a} ile {b} arasında Dünya üzerinden en kısa yol.","h_opposite":"Dünyanın neredeyse tam karşı uçlarındasınız.","h_opposite_where":"Tek bir yarı yol noktası yok: {a} ile {b} arasındaki her yol aşağı yukarı aynı uzunlukta; her yönde yaklaşık {d} gidince dünyayı çepeçevre saran bir nokta halkasına varılır.","h_opposite_share":"Dünyanın karşı uçlarındayız.","h_coast":"Yarı yol noktanız {water}, kıyının hemen açığında.","h_coast_share":"Yarı yol noktamız {city} yakınlarında, kıyının hemen açığında; ikimize de {d} uzaklıkta.","h_sea":"Yarı yol noktanız {water}, açık denizin ortasında.","h_sea_share":"Yarı yol noktamız {water}, açık denizin ortasında; ikimize de {d} uzaklıkta.","h_land_near":"Yarı yol noktanız {in}, {city} yakınlarında.","h_land_near_share":"Yarı yol noktamız {city} yakınlarında; ikimize de {d} uzaklıkta.","h_land":"Yarı yol noktanız {in}.","h_land_share":"Yarı yol noktamız {in}; ikimize de {d} uzaklıkta.","h_where":"İkinize de {d} uzaklıkta, koordinatları {coord}.","h_nearest":"Listemizdeki en yakın büyük şehir {d} uzaklıktaki {city}.","h_from_mid":"yarı yol noktasına {d}","h_fair_hubs":"Yoğun havalimanı olan büyük şehirler arasında bunlar, ikinizin yolculuğundan uzun olanını olabildiğince kısa tutuyor.","h_fair_all":"Bildiğimiz bütün şehirler arasında bunlar, ikinizin yolculuğundan uzun olanını olabildiğince kısa tutuyor.","h_fair_detail":"{a}: {da} · {b}: {db}","h_fair_share":"Buluşmak için en adil şehir: {city}.","h_caption":"Kalp, {a} ile {b} arasındaki yarı yol noktasını gösteriyor.","h_caption_opposite":"{a} ve {b} dünyanın karşı uçlarında.","h_share_title":"Yarı yol noktamız","t_run":"sende {a1}–{a2}, sevgilinde {b1}–{b2}","t_join":"; ayrıca ","t_same_clock":"Saatleriniz aynı ve günde {gap} ikiniz de uyanıksınız.","t_same_clock_none":"Saatleriniz aynı ama uyanık olduğunuz saatler kesişmiyor.","t_all_day":"Bütün gün ikiniz de uyanıksınız. Ne şanslısınız.","t_overlap":"Günde {gap} ikiniz de uyanıksınız: {runs}.","t_none":"Bu gün uyanık olduğunuz saatler kesişmiyor.","t_now":"Şu an {a} saatiyle {da} {ta}, {b} saatiyle {db} {tb}. {gap}.","t_gap_same":"{a} ile {b} arasında saat farkı yok","t_gap_ahead":"{b} saati, {a} saatinden {gap} ileri","t_gap_behind":"{b} saati, {a} saatinden {gap} geri","t_you":"Sen","t_them":"Sevgilin","t_aria":"{a} ve {b} için bir gün. İkinizin de uyanık olduğu saatler: {runs}.","t_aria_none":"{a} ve {b} için bir gün. Uyanık olduğunuz saatler kesişmiyor.","t_best":"Sende {ta}, sevgilinde {tb}{day}","t_best_sep":". ","t_reason":"Senin için {la}, sevgilin için {lb}.","t_reason_short":"Senin için {la}, sevgilin için {lb}; ortak süreniz de yalnızca {gap}.","t_work":"İş günlerinde öğle arası ya da hafta sonu size daha uygun olabilir.","t_tod_evening":"akşam","t_tod_early_morning":"sabahın erken saati","t_tod_lunch":"öğle arası","t_tod_work":"mesai saati","t_tod_early":"çok erken","t_tod_late":"gece geç saat","t_no_best":"Şu hâliyle ikinize de uyan bir saat yok.","t_try_you_late":"{d} daha geç yatarsan yarım saatiniz ortak olur.","t_try_them_late":"Sevgilin {d} daha geç yatarsa yarım saatiniz ortak olur.","t_try_you_early":"{d} daha erken kalkarsan yarım saatiniz ortak olur.","t_try_them_early":"Sevgilin {d} daha erken kalkarsa yarım saatiniz ortak olur.","t_conv_you":"{city} saatiyle {time}{day}","t_conv_them":"{city} saatiyle {time}{day}","t_conv_who_you":"sende ({city}) iken, sevgilinde","t_conv_who_them":"sevgilinde ({city}) iken, sende","t_change_forward":"{date} tarihinde {city} saatleri ileri alınıyor ve fark değişiyor: o tarihten itibaren {gap}.","t_change_back":"{date} tarihinde {city} saatleri geri alınıyor ve fark değişiyor: o tarihten itibaren {gap}.","t_steady":"{gap}, bütün yıl boyunca: önümüzdeki bir yıl içinde ikinizde de saatler değişmiyor.","t_share":"{a} ve {b}: günde {gap} ikimiz de uyanığız. Aramak için en iyi saat: {best}.","t_share_none":"{a} ve {b}: uyanık olduğumuz saatler kesişmiyor. Sesli mesaj zamanı.","t_share_title":"İkimiz de ne zaman uyanığız?","c_head_names":"{names}, kavuşmanıza kalan süre","c_head":"Kavuşmaya kalan süre","c_done_names":"{names}, sonunda birliktesiniz","c_done":"Sonunda birlikte","c_unit_d":{"one":"gün","other":"gün"},"c_unit_h":{"one":"saat","other":"saat"},"c_unit_m":{"one":"dakika","other":"dakika"},"c_unit_s":{"one":"saniye","other":"saniye"},"c_doc_title":{"one":"{n} gün kaldı · {title}","other":"{n} gün kaldı · {title}"},"c_doc_done":"Sonunda birlikte · {title}","c_when":"{date}, {city} saatiyle {time}.","c_here":"Bu, şu an bulunduğun yerde {date}, saat {time} demek.","c_sleeps":{"one":"{n} uyku kaldı.","other":"{n} uyku kaldı."},"c_today":"Bugün o gün.","c_past":"O an geldi. Yeni bir geri sayım başlatmak için bir sonraki tarihi seç.","c_empty_city":"Buluşacağınız şehri seç.","c_empty_date":"Geri sayımını başlatmak için günü seç.","c_share":{"one":"{n} uyku sonra, {date} günü yeniden birlikteyiz.","other":"{n} uyku sonra, {date} günü yeniden birlikteyiz."},"c_share_today":"Bugün yeniden kavuşuyoruz.","c_share_done":"Sonunda birlikteyiz.","c_share_names":"{names}: {text}","c_share_title":"Kavuşmamıza geri sayım","c_ics_summary":"Yeniden birlikte","c_ics_summary_names":"Yeniden birlikte: {names}","c_ics_desc":"Geri sayım: {url}","c_ics_alarm":"Yarın yeniden birliktesiniz","c_ics_file":"yeniden-birlikte.ics"},"countries":{"US":"ABD","CD":"Kongo Demokratik Cumhuriyeti","CG":"Kongo Cumhuriyeti","MM":"Myanmar","CI":"Fildişi Sahili","BL":"Saint Barthélemy","HK":"Hong Kong","MO":"Makao","PS":"Filistin"},"countryIn":{"AD":"Andorra'da","AE":"Birleşik Arap Emirlikleri'nde","AF":"Afganistan'da","AG":"Antigua ve Barbuda'da","AI":"Anguilla'da","AL":"Arnavutluk'ta","AM":"Ermenistan'da","AO":"Angola'da","AQ":"Antarktika'da","AR":"Arjantin'de","AS":"Amerikan Samoası'nda","AT":"Avusturya'da","AU":"Avustralya'da","AW":"Aruba'da","AX":"Åland Adaları'nda","AZ":"Azerbaycan'da","BA":"Bosna-Hersek'te","BB":"Barbados'ta","BD":"Bangladeş'te","BE":"Belçika'da","BF":"Burkina Faso'da","BG":"Bulgaristan'da","BH":"Bahreyn'de","BI":"Burundi'de","BJ":"Benin'de","BL":"Saint Barthélemy'de","BM":"Bermuda'da","BN":"Brunei'de","BO":"Bolivya'da","BR":"Brezilya'da","BS":"Bahamalar'da","BT":"Butan'da","BW":"Botsvana'da","BY":"Belarus'ta","BZ":"Belize'de","CA":"Kanada'da","CD":"Kongo Demokratik Cumhuriyeti'nde","CF":"Orta Afrika Cumhuriyeti'nde","CG":"Kongo Cumhuriyeti'nde","CH":"İsviçre'de","CI":"Fildişi Sahili'nde","CK":"Cook Adaları'nda","CL":"Şili'de","CM":"Kamerun'da","CN":"Çin'de","CO":"Kolombiya'da","CR":"Kosta Rika'da","CU":"Küba'da","CV":"Cabo Verde'de","CW":"Curaçao'da","CY":"Kıbrıs'ta","CZ":"Çekya'da","DE":"Almanya'da","DJ":"Cibuti'de","DK":"Danimarka'da","DM":"Dominika'da","DO":"Dominik Cumhuriyeti'nde","DZ":"Cezayir'de","EC":"Ekvador'da","EE":"Estonya'da","EG":"Mısır'da","EH":"Batı Sahra'da","ER":"Eritre'de","ES":"İspanya'da","ET":"Etiyopya'da","FI":"Finlandiya'da","FJ":"Fiji'de","FK":"Falkland Adaları'nda","FM":"Mikronezya'da","FO":"Faroe Adaları'nda","FR":"Fransa'da","GA":"Gabon'da","GB":"Birleşik Krallık'ta","GD":"Grenada'da","GE":"Gürcistan'da","GG":"Guernsey'de","GH":"Gana'da","GL":"Grönland'da","GM":"Gambiya'da","GN":"Gine'de","GQ":"Ekvator Ginesi'nde","GR":"Yunanistan'da","GS":"Güney Georgia ve Güney Sandwich Adaları'nda","GT":"Guatemala'da","GU":"Guam'da","GW":"Gine-Bissau'da","GY":"Guyana'da","HK":"Hong Kong'da","HM":"Heard Adası ve McDonald Adaları'nda","HN":"Honduras'ta","HR":"Hırvatistan'da","HT":"Haiti'de","HU":"Macaristan'da","ID":"Endonezya'da","IE":"İrlanda'da","IL":"İsrail'de","IM":"Man Adası'nda","IN":"Hindistan'da","IO":"Britanya Hint Okyanusu Toprakları'nda","IQ":"Irak'ta","IR":"İran'da","IS":"İzlanda'da","IT":"İtalya'da","JE":"Jersey'de","JM":"Jamaika'da","JO":"Ürdün'de","JP":"Japonya'da","KE":"Kenya'da","KG":"Kırgızistan'da","KH":"Kamboçya'da","KI":"Kiribati'de","KM":"Komorlar'da","KN":"Saint Kitts ve Nevis'te","KP":"Kuzey Kore'de","KR":"Güney Kore'de","KW":"Kuveyt'te","KY":"Cayman Adaları'nda","KZ":"Kazakistan'da","LA":"Laos'ta","LB":"Lübnan'da","LC":"Saint Lucia'da","LI":"Liechtenstein'da","LK":"Sri Lanka'da","LR":"Liberya'da","LS":"Lesotho'da","LT":"Litvanya'da","LU":"Lüksemburg'da","LV":"Letonya'da","LY":"Libya'da","MA":"Fas'ta","MC":"Monako'da","MD":"Moldova'da","ME":"Karadağ'da","MF":"Saint Martin'de","MG":"Madagaskar'da","MH":"Marshall Adaları'nda","MK":"Kuzey Makedonya'da","ML":"Mali'de","MM":"Myanmar'da","MN":"Moğolistan'da","MO":"Makao'da","MP":"Kuzey Mariana Adaları'nda","MR":"Moritanya'da","MS":"Montserrat'ta","MT":"Malta'da","MU":"Mauritius'ta","MV":"Maldivler'de","MW":"Malavi'de","MX":"Meksika'da","MY":"Malezya'da","MZ":"Mozambik'te","NA":"Namibya'da","NC":"Yeni Kaledonya'da","NE":"Nijer'de","NF":"Norfolk Adası'nda","NG":"Nijerya'da","NI":"Nikaragua'da","NL":"Hollanda'da","NO":"Norveç'te","NP":"Nepal'de","NR":"Nauru'da","NU":"Niue'de","NZ":"Yeni Zelanda'da","OM":"Umman'da","PA":"Panama'da","PE":"Peru'da","PF":"Fransız Polinezyası'nda","PG":"Papua Yeni Gine'de","PH":"Filipinler'de","PK":"Pakistan'da","PL":"Polonya'da","PM":"Saint Pierre ve Miquelon'da","PN":"Pitcairn Adaları'nda","PR":"Porto Riko'da","PS":"Filistin'de","PT":"Portekiz'de","PW":"Palau'da","PY":"Paraguay'da","QA":"Katar'da","RO":"Romanya'da","RS":"Sırbistan'da","RU":"Rusya'da","RW":"Ruanda'da","SA":"Suudi Arabistan'da","SB":"Solomon Adaları'nda","SC":"Seyşeller'de","SD":"Sudan'da","SE":"İsveç'te","SG":"Singapur'da","SH":"Saint Helena'da","SI":"Slovenya'da","SK":"Slovakya'da","SL":"Sierra Leone'de","SM":"San Marino'da","SN":"Senegal'de","SO":"Somali'de","SR":"Surinam'da","SS":"Güney Sudan'da","ST":"Sao Tome ve Principe'de","SV":"El Salvador'da","SX":"Sint Maarten'de","SY":"Suriye'de","SZ":"Esvatini'de","TC":"Turks ve Caicos Adaları'nda","TD":"Çad'da","TF":"Fransız Güney Toprakları'nda","TG":"Togo'da","TH":"Tayland'da","TJ":"Tacikistan'da","TL":"Timor-Leste'de","TM":"Türkmenistan'da","TN":"Tunus'ta","TO":"Tonga'da","TR":"Türkiye'de","TT":"Trinidad ve Tobago'da","TV":"Tuvalu'da","TW":"Tayvan'da","TZ":"Tanzanya'da","UA":"Ukrayna'da","UG":"Uganda'da","US":"ABD'de","UY":"Uruguay'da","UZ":"Özbekistan'da","VA":"Vatikan'da","VC":"Saint Vincent ve Grenadinler'de","VE":"Venezuela'da","VG":"Britanya Virjin Adaları'nda","VI":"ABD Virjin Adaları'nda","VN":"Vietnam'da","VU":"Vanuatu'da","WF":"Wallis ve Futuna'da","WS":"Samoa'da","XK":"Kosova'da","YE":"Yemen'de","ZA":"Güney Afrika'da","ZM":"Zambiya'da","ZW":"Zimbabve'de"},"waters":{"med":"Akdeniz'de","black":"Karadeniz'de","caspian":"Hazar Denizi'nde","red":"Kızıldeniz'de","gulf":"Basra Körfezi'nde","arabian":"Umman Denizi'nde","bengal":"Bengal Körfezi'nde","scs":"Güney Çin Denizi'nde","japan":"Japon Denizi'nde","mexico":"Meksika Körfezi'nde","caribbean":"Karayip Denizi'nde","north":"Kuzey Denizi'nde","baltic":"Baltık Denizi'nde","hudson":"Hudson Körfezi'nde","tasman":"Tasman Denizi'nde","atlantic_n":"Kuzey Atlas Okyanusu'nda","atlantic_s":"Güney Atlas Okyanusu'nda","pacific_n":"Kuzey Pasifik Okyanusu'nda","pacific_s":"Güney Pasifik Okyanusu'nda","indian":"Hint Okyanusu'nda","arctic":"Arktik Okyanusu'nda","southern":"Güney Okyanusu'nda"},"cities":{"istanbul-tr":"İstanbul","izmir-tr":"İzmir","london-gb":"Londra","edinburgh-gb":"Edinburg","london-ca":"London","munich-de":"Münih","cologne-de":"Köln","nuremberg-de":"Nürnberg","rome-it":"Roma","milan-it":"Milano","naples-it":"Napoli","turin-it":"Torino","genoa-it":"Cenova","florence-it":"Floransa","venice-it":"Venedik","palermo-it":"Palermo","seville-es":"Sevilla","lisbon-pt":"Lizbon","athens-gr":"Atina","thessaloniki-gr":"Selanik","nicosia-cy":"Lefkoşa","limassol-cy":"Limasol","vienna-at":"Viyana","zurich-ch":"Zürih","geneva-ch":"Cenevre","brussels-be":"Brüksel","antwerp-be":"Anvers","bruges-be":"Brugge","ghent-be":"Gent","the-hague-nl":"Lahey","copenhagen-dk":"Kopenhag","stockholm-se":"Stokholm","gothenburg-se":"Göteborg","warsaw-pl":"Varşova","krakow-pl":"Krakov","prague-cz":"Prag","budapest-hu":"Budapeşte","bucharest-ro":"Bükreş","sofia-bg":"Sofya","plovdiv-bg":"Filibe","belgrade-rs":"Belgrad","sarajevo-ba":"Saraybosna","skopje-mk":"Üsküp","tirana-al":"Tiran","chisinau-md":"Kişinev","kyiv-ua":"Kiev","kharkiv-ua":"Harkiv","odesa-ua":"Odessa","moscow-ru":"Moskova","saint-petersburg-ru":"St. Petersburg","sochi-ru":"Soçi","tbilisi-ge":"Tiflis","batumi-ge":"Batum","yerevan-am":"Erivan","baku-az":"Bakü","abu-dhabi-ae":"Abu Dabi","kuwait-city-kw":"Kuveyt","muscat-om":"Maskat","riyadh-sa":"Riyad","jeddah-sa":"Cidde","mecca-sa":"Mekke","medina-sa":"Medine","jerusalem-il":"Kudüs","haifa-il":"Hayfa","gaza-ps":"Gazze","beirut-lb":"Beyrut","damascus-sy":"Şam","baghdad-iq":"Bağdat","tehran-ir":"Tahran","mashhad-ir":"Meşhed","isfahan-ir":"İsfahan","shiraz-ir":"Şiraz","sanaa-ye":"Sana","cairo-eg":"Kahire","alexandria-eg":"İskenderiye","luxor-eg":"Luksor","casablanca-ma":"Kazablanka","marrakesh-ma":"Marakeş","fez-ma":"Fes","tangier-ma":"Tanca","algiers-dz":"Cezayir","oran-dz":"Vahran","tunis-tn":"Tunus","tripoli-ly":"Trablus","kabul-af":"Kabil","karachi-pk":"Karaçi","lahore-pk":"Lahor","islamabad-pk":"İslamabad","peshawar-pk":"Peşaver","delhi-in":"Delhi","kolkata-in":"Kalküta","beijing-cn":"Pekin","shanghai-cn":"Şanghay","urumqi-cn":"Urumçi","seoul-kr":"Seul","singapore-sg":"Singapur","almaty-kz":"Almatı","tashkent-uz":"Taşkent","samarkand-uz":"Semerkant","bishkek-kg":"Bişkek","dushanbe-tj":"Duşanbe","ashgabat-tm":"Aşkabat","mexico-city-mx":"Meksiko","havana-cu":"Havana","cape-town-za":"Cape Town","addis-ababa-et":"Addis Ababa","luxembourg-lu":"Lüksemburg","strasbourg-fr":"Strazburg"},"cityAliases":{"kyiv-ua":"Kyiv","kharkiv-ua":"Harkov","lviv-ua":"Lvov","plovdiv-bg":"Plovdiv","limassol-cy":"Leymosun","mexico-city-mx":"Meksika","saint-petersburg-ru":"Sankt-Peterburg","kuwait-city-kw":"Kuveyt Şehri"}}</script>
+<script src="../../tools/cities.js?v=20261104" defer></script>
+<script src="../../tools/world.js?v=20261104" defer></script>
+<script src="../../tools/common.js?v=20261104" defer></script>
+<script src="../../tools/halfway.js?v=20261104" defer></script>
+<script src="../../site.js?v=20261028" defer></script>
+<script type="application/json" id="wl-text">{"invalid": "Bu bir e-posta adresine benzemiyor. Kontrol edebilir misin?", "sending": "Gönderiliyor…", "already_lead": "Zaten listedesin.", "already": "Çıktığı gün sana e-posta göndereceğiz.", "added_lead": "Listedesin!", "added": "Çıktığı gün sana e-posta göndereceğiz.", "later": "Çok fazla deneme oldu. Lütfen biraz bekleyip yeniden dene.", "error": "Bir şeyler ters gitti. Lütfen bir dakika sonra yeniden dene.", "offline": "Sunucumuza ulaşamadık. Lütfen bağlantını kontrol edip yeniden dene."}</script>
+<script src="../../waitlist.js?v=3" defer></script>
+</body>
+</html>

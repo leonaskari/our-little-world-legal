@@ -1,0 +1,154 @@
+/* Our Tiny Planet: the guides. On top of site.css (the home page's sky, top bar,
+   footer and waitlist form); this file only adds a comfortable page to read. */
+
+.guide { max-width: 760px; padding-bottom: 20px; }
+/* site.css pads every <section> for the home page; a guide's sections are just parts of the text. */
+.guide section { padding: 0; }
+.guide article, .hub { padding: clamp(28px, 6vw, 56px) 0 0; }
+
+/* Where you are: Home / Guides / this page. */
+.crumbs { margin: 0 0 18px; font-size: 14px; color: var(--muted); }
+.crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 0; margin: 0; padding: 0; }
+.crumbs li + li::before { content: "/"; margin: 0 8px; opacity: .6; }
+.crumbs a { color: var(--muted); text-decoration: none; font-weight: 700; }
+.crumbs a:hover { color: var(--star); }
+.crumbs [aria-current] { color: var(--star); }
+
+.guide .kicker { margin: 0; }
+.guide h1 {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(34px, 7vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin: 10px 0 14px;
+  text-wrap: balance;
+}
+.meta { margin: 0 0 26px; color: var(--muted); font-size: 15px; font-weight: 600; }
+.meta span + span::before { content: "·"; margin: 0 8px; }
+
+/* The words: about 65 characters a line. */
+.prose { max-width: 65ch; }
+.prose p, .prose li { font-size: 18px; line-height: 1.72; }
+.prose p { margin: 0 0 18px; }
+.prose .lede { font-size: clamp(19px, 2.6vw, 21px); line-height: 1.6; color: var(--star); font-weight: 600; margin-bottom: 26px; }
+.prose h2 {
+  text-align: start;
+  font-size: clamp(27px, 4.6vw, 36px);
+  line-height: 1.15;
+  margin: 56px 0 14px;
+  padding-top: 26px;
+  border-top: 1px solid #3d2c5299;
+}
+.prose h3 { font-size: clamp(20px, 3vw, 23px); line-height: 1.25; margin: 30px 0 8px; }
+.prose ul, .prose ol { margin: 0 0 20px; padding-inline-start: 24px; padding-inline-end: 0; }
+.prose li { margin: 6px 0; line-height: 1.55; }
+.prose li::marker { color: var(--gold); }
+.prose strong { color: var(--star); }
+.prose a { text-underline-offset: 3px; }
+.prose a:hover { color: var(--star); }
+
+/* "On a call": how to play it, set apart. */
+.prose .how {
+  padding: 12px 16px;
+  border-inline-start: 3px solid var(--gold);
+  border-start-start-radius: 4px; border-end-start-radius: 4px; border-start-end-radius: 14px; border-end-end-radius: 14px;
+  background: #2a1d3a99;
+  color: var(--muted);
+  font-size: 17px;
+}
+.prose .how strong { color: var(--gold); }
+
+/* On this page. */
+.toc { margin: 0 0 10px; padding: 20px 22px 14px; border-radius: 24px; background: #2a1d3acc; border: 1px solid var(--line); }
+.toc h2 {
+  margin: 0 0 8px;
+  padding: 0;
+  border: 0;
+  font-family: "Nunito Sans", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-align: start;
+  color: var(--gold);
+}
+.toc ol { margin: 0; padding: 0; padding-inline-start: 22px; columns: 2 260px; column-gap: 28px; }
+.toc li { margin: 0 0 8px; font-size: 16px; line-height: 1.4; break-inside: avoid; }
+.toc li::marker { color: var(--muted); font-size: 14px; }
+.toc a { color: var(--star); text-decoration: none; }
+.toc a:hover { color: var(--rose); text-decoration: underline; }
+
+/* A small table that scrolls inside itself, never the page. */
+.table-wrap { overflow-x: auto; margin: 0 0 22px; border-radius: 18px; border: 1px solid var(--line); background: #2a1d3a99; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.45; }
+.prose th, .prose td { padding: 11px 14px; text-align: start; vertical-align: top; border-bottom: 1px solid var(--line); }
+.prose th { color: var(--gold); font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.prose tr:last-child td { border-bottom: 0; }
+.prose td:first-child { font-weight: 700; color: var(--star); }
+.prose td { color: var(--muted); }
+
+/* The part about the app. */
+.prose .app {
+  margin: 56px 0 0;
+  padding: 6px 24px 8px;
+  border-radius: 28px;
+  border: 1px solid #e0b06099;
+  box-shadow: 0 0 0 1px #e0b06033, 0 20px 60px #e0b0601a;
+  background: linear-gradient(160deg, #3a2a52cc, #2a1d3acc);
+}
+.prose .app h2 { border-top: 0; margin-top: 22px; padding-top: 0; }
+.prose .app p:last-child { margin-bottom: 18px; }
+
+/* Questions: all on show. */
+.prose .faq-list h3 { margin-top: 26px; }
+.prose .faq-list p { color: var(--muted); }
+
+/* More to read, and the free tools. */
+.related { margin: 64px 0 0; }
+.related h2 { text-align: start; font-size: clamp(25px, 4vw, 32px); margin: 0 0 16px; }
+.tiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+.tiles a {
+  display: block;
+  height: 100%;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: #2a1d3acc;
+  border: 1px solid var(--line);
+  color: var(--star);
+  text-decoration: none;
+  transition: border-color .2s, transform .3s var(--ease);
+}
+.tiles a:hover { border-color: var(--gold); transform: translateY(-2px); }
+.tiles b { display: block; font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 20px; line-height: 1.25; }
+.tiles span { display: block; margin-top: 6px; color: var(--muted); font-size: 15px; line-height: 1.5; }
+.tiles .tag { display: inline-block; margin: 0 0 8px; color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+
+/* The end: the waitlist, as on the home page. */
+.guide .finale { margin: 64px 0 50px; padding: clamp(44px, 8vw, 70px) 18px; }
+.guide .finale h2 { font-size: clamp(28px, 5vw, 40px); }
+.guide .finale .intro { margin-bottom: 0; }
+
+/* The hub. */
+.hub .lede { color: var(--muted); }
+.hub .tiles { grid-template-columns: 1fr; }
+.hub .tiles b { font-size: clamp(21px, 3.4vw, 25px); }
+.hub .tools { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.hub h2 { text-align: start; font-size: clamp(27px, 4.6vw, 36px); margin: 48px 0 14px; }
+.hub-note { margin: -4px 0 16px; color: var(--muted); }
+
+/* Narrow screens: each row of a table becomes a small card. */
+@media (max-width: 600px) {
+  .prose table, .prose tbody, .prose tr, .prose td { display: block; }
+  .prose thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .prose tr { padding: 12px 16px; border-bottom: 1px solid var(--line); }
+  .prose tr:last-child { border-bottom: 0; }
+  .prose td { padding: 2px 0; border: 0; }
+  .prose td:nth-child(2) { color: var(--gold); font-weight: 700; font-size: 15px; }
+  article .crumbs li:last-child { display: none; }
+}
+@media (max-width: 420px) {
+  .prose p, .prose li { font-size: 17px; }
+  .toc { padding: 18px 18px 10px; }
+  .prose .app { padding: 4px 18px 6px; }
+}

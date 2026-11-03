@@ -550,3 +550,7 @@ h1, h2, h3, .lede { overflow-wrap: break-word; }
 @media (max-width: 359px) {
   [dir=rtl] .wl-row input[type=email] { text-align: center; }
 }
+
+/* Korean wraps between words, not inside them; Japanese headings wrap at phrase boundaries where supported. */
+:lang(ko) { word-break: keep-all; overflow-wrap: anywhere; }
+:lang(ja) h1, :lang(ja) h2 { word-break: auto-phrase; }

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="vi" data-lang="vi" data-page="tools-halfway">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Điểm giữa hai thành phố: gặp nhau ở giữa đường</title>
+<meta name="description" content="Tìm điểm chính giữa bạn và người ấy, các thành phố lớn gần nhất (hoặc vùng biển, nếu nó rơi xuống biển) và thành phố công bằng nhất để gặp nhau.">
+<!-- seo -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Our Tiny Planet">
+<meta property="og:title" content="Điểm giữa hai thành phố: gặp nhau ở giữa đường">
+<meta property="og:description" content="Tìm điểm chính giữa bạn và người ấy, các thành phố lớn gần nhất (hoặc vùng biển, nếu nó rơi xuống biển) và thành phố công bằng nhất để gặp nhau.">
+<meta property="og:url" content="https://ourtinyplanet.com/vi/tools/halfway.html">
+<meta property="og:image" content="https://ourtinyplanet.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Our Tiny Planet: a tiny planet for the two of you, wherever you are">
+<meta property="og:locale" content="vi_VN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Điểm giữa hai thành phố: gặp nhau ở giữa đường">
+<meta name="twitter:description" content="Tìm điểm chính giữa bạn và người ấy, các thành phố lớn gần nhất (hoặc vùng biển, nếu nó rơi xuống biển) và thành phố công bằng nhất để gặp nhau.">
+<meta name="twitter:image" content="https://ourtinyplanet.com/img/og.png">
+<meta name="twitter:image:alt" content="Our Tiny Planet: a tiny planet for the two of you, wherever you are">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Tìm điểm giữa của hai bạn","url":"https://ourtinyplanet.com/vi/tools/halfway.html","description":"Tìm điểm chính giữa bạn và người ấy, các thành phố lớn gần nhất (hoặc vùng biển, nếu nó rơi xuống biển) và thành phố công bằng nhất để gặp nhau.","applicationCategory":"TravelApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"vi","image":"https://ourtinyplanet.com/img/og.png","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"publisher":{"@type":"Organization","name":"Our Tiny Planet","url":"https://ourtinyplanet.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://ourtinyplanet.com/vi/"},{"@type":"ListItem","position":2,"name":"Công cụ","item":"https://ourtinyplanet.com/vi/tools/"},{"@type":"ListItem","position":3,"name":"Tìm điểm giữa của hai bạn","item":"https://ourtinyplanet.com/vi/tools/halfway.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"vi","mainEntity":[{"@type":"Question","name":"Nếu điểm giữa của tụi mình nằm giữa biển thì sao?","acceptedAnswer":{"@type":"Answer","text":"Chuyện này rất hay xảy ra, vì phần lớn Trái Đất là nước. Ví dụ London và New York gặp nhau ở giữa Bắc Đại Tây Dương. Khi đó chúng mình cho xem các thành phố lớn gần nhất và thành phố công bằng nhất để gặp nhau, vốn hữu ích hơn."}},{"@type":"Question","name":"Thành phố công bằng nhất được chọn thế nào?","acceptedAnswer":{"@type":"Answer","text":"Từ danh sách các thành phố lớn có sân bay đông đúc, chúng mình chọn nơi mà chặng đường thẳng dài hơn trong hai chặng của hai bạn là ngắn nhất. Nếu hai bạn sống khá gần nhau, chúng mình dùng mọi thành phố trong danh sách."}},{"@type":"Question","name":"Điểm giữa có phải là nửa thời gian di chuyển không?","acceptedAnswer":{"@type":"Answer","text":"Không. Đó là nửa quãng đường. Thời gian di chuyển còn tùy chuyến bay, nối chuyến và vị trí sân bay, nên nơi công bằng tính theo giờ có thể khác."}},{"@type":"Question","name":"Có chia sẻ điểm giữa của tụi mình được không?","acceptedAnswer":{"@type":"Answer","text":"Được. Sao chép link tạo một đường link mở trang này với cả hai thành phố đã điền sẵn. Chúng mình không lưu gì cả: các thành phố nằm ngay trong đường link."}}]}</script>
+<!-- /seo -->
+<meta name="theme-color" content="#110a18">
+<link rel="icon" href="../../favicon.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- fonts --><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap"></noscript><!-- /fonts -->
+<link rel="stylesheet" href="../../site.css?v=20261103">
+<link rel="stylesheet" href="../../tools/tools.css?v=20261104">
+<script>document.documentElement.classList.add('js');</script>
+<!-- lang:head -->
+<link rel="canonical" href="https://ourtinyplanet.com/vi/tools/halfway.html">
+<link rel="alternate" hreflang="en" href="https://ourtinyplanet.com/tools/halfway.html">
+<link rel="alternate" hreflang="ja" href="https://ourtinyplanet.com/ja/tools/halfway.html">
+<link rel="alternate" hreflang="de" href="https://ourtinyplanet.com/de/tools/halfway.html">
+<link rel="alternate" hreflang="fr" href="https://ourtinyplanet.com/fr/tools/halfway.html">
+<link rel="alternate" hreflang="es" href="https://ourtinyplanet.com/es/tools/halfway.html">
+<link rel="alternate" hreflang="pt" href="https://ourtinyplanet.com/pt/tools/halfway.html">
+<link rel="alternate" hreflang="ar" href="https://ourtinyplanet.com/ar/tools/halfway.html">
+<link rel="alternate" hreflang="ko" href="https://ourtinyplanet.com/ko/tools/halfway.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://ourtinyplanet.com/zh-hant/tools/halfway.html">
+<link rel="alternate" hreflang="it" href="https://ourtinyplanet.com/it/tools/halfway.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://ourtinyplanet.com/zh-hans/tools/halfway.html">
+<link rel="alternate" hreflang="tr" href="https://ourtinyplanet.com/tr/tools/halfway.html">
+<link rel="alternate" hreflang="id" href="https://ourtinyplanet.com/id/tools/halfway.html">
+<link rel="alternate" hreflang="ru" href="https://ourtinyplanet.com/ru/tools/halfway.html">
+<link rel="alternate" hreflang="pl" href="https://ourtinyplanet.com/pl/tools/halfway.html">
+<link rel="alternate" hreflang="th" href="https://ourtinyplanet.com/th/tools/halfway.html">
+<link rel="alternate" hreflang="vi" href="https://ourtinyplanet.com/vi/tools/halfway.html">
+<link rel="alternate" hreflang="nl" href="https://ourtinyplanet.com/nl/tools/halfway.html">
+<link rel="alternate" hreflang="sv" href="https://ourtinyplanet.com/sv/tools/halfway.html">
+<link rel="alternate" hreflang="da" href="https://ourtinyplanet.com/da/tools/halfway.html">
+<link rel="alternate" hreflang="nb" href="https://ourtinyplanet.com/nb/tools/halfway.html">
+<link rel="alternate" hreflang="no" href="https://ourtinyplanet.com/nb/tools/halfway.html">
+<link rel="alternate" hreflang="fi" href="https://ourtinyplanet.com/fi/tools/halfway.html">
+<link rel="alternate" hreflang="uk" href="https://ourtinyplanet.com/uk/tools/halfway.html">
+<link rel="alternate" hreflang="x-default" href="https://ourtinyplanet.com/tools/halfway.html">
+<script src="../../lang.js?v=1"></script>
+<!-- /lang:head -->
+</head>
+<body data-waitlist="erblsrbrwzqdgwsljslz">
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+<a class="skip" href="#tool">Đến công cụ</a>
+
+<header class="top">
+  <a class="brand" href="../"><img src="../../favicon.png" alt="" width="30" height="30">Our Tiny Planet</a>
+  <nav aria-label="Menu chính">
+    <a href="./">Tất cả</a><a href="distance.html">Khoảng cách</a><a href="halfway.html" aria-current="page">Điểm giữa</a><a href="time-zones.html">Múi giờ</a><a href="countdown.html">Đếm ngược</a>
+    <a class="pill" href="#app">Ứng dụng</a>
+  </nav>
+  <!-- lang:switcher --><details class="lang"><summary aria-label="Ngôn ngữ: Tiếng Việt"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9M12 3C9.5 5.5 8.2 8.5 8.2 12s1.3 6.5 3.8 9"/></svg><span class="lang-name">Tiếng Việt</span></summary><ul aria-label="Ngôn ngữ"><li><a href="../../tools/halfway.html" hreflang="en" lang="en-GB" dir="ltr" data-l="en">English</a></li><li><a href="../../ja/tools/halfway.html" hreflang="ja" lang="ja" dir="ltr" data-l="ja">日本語</a></li><li><a href="../../de/tools/halfway.html" hreflang="de" lang="de" dir="ltr" data-l="de">Deutsch</a></li><li><a href="../../fr/tools/halfway.html" hreflang="fr" lang="fr" dir="ltr" data-l="fr">Français</a></li><li><a href="../../es/tools/halfway.html" hreflang="es" lang="es-419" dir="ltr" data-l="es">Español (Latinoamérica)</a></li><li><a href="../../pt/tools/halfway.html" hreflang="pt" lang="pt-BR" dir="ltr" data-l="pt">Português (Brasil)</a></li><li><a href="../../ar/tools/halfway.html" hreflang="ar" lang="ar" dir="rtl" data-l="ar">العربية</a></li><li><a href="../../ko/tools/halfway.html" hreflang="ko" lang="ko" dir="ltr" data-l="ko">한국어</a></li><li><a href="../../zh-hant/tools/halfway.html" hreflang="zh-Hant" lang="zh-Hant" dir="ltr" data-l="zh-hant">繁體中文</a></li><li><a href="../../it/tools/halfway.html" hreflang="it" lang="it" dir="ltr" data-l="it">Italiano</a></li><li><a href="../../zh-hans/tools/halfway.html" hreflang="zh-Hans" lang="zh-Hans" dir="ltr" data-l="zh-hans">简体中文</a></li><li><a href="../../tr/tools/halfway.html" hreflang="tr" lang="tr" dir="ltr" data-l="tr">Türkçe</a></li><li><a href="../../id/tools/halfway.html" hreflang="id" lang="id" dir="ltr" data-l="id">Bahasa Indonesia</a></li><li><a href="../../ru/tools/halfway.html" hreflang="ru" lang="ru" dir="ltr" data-l="ru">Русский</a></li><li><a href="../../pl/tools/halfway.html" hreflang="pl" lang="pl" dir="ltr" data-l="pl">Polski</a></li><li><a href="../../th/tools/halfway.html" hreflang="th" lang="th" dir="ltr" data-l="th">ไทย</a></li><li><a href="halfway.html" hreflang="vi" lang="vi" dir="ltr" data-l="vi" aria-current="true">Tiếng Việt</a></li><li><a href="../../nl/tools/halfway.html" hreflang="nl" lang="nl" dir="ltr" data-l="nl">Nederlands</a></li><li><a href="../../sv/tools/halfway.html" hreflang="sv" lang="sv" dir="ltr" data-l="sv">Svenska</a></li><li><a href="../../da/tools/halfway.html" hreflang="da" lang="da" dir="ltr" data-l="da">Dansk</a></li><li><a href="../../nb/tools/halfway.html" hreflang="nb" lang="nb" dir="ltr" data-l="nb">Norsk</a></li><li><a href="../../fi/tools/halfway.html" hreflang="fi" lang="fi" dir="ltr" data-l="fi">Suomi</a></li><li><a href="../../uk/tools/halfway.html" hreflang="uk" lang="uk" dir="ltr" data-l="uk">Українська</a></li></ul></details><!-- /lang:switcher -->
+</header>
+
+<main class="tool-page">
+  <nav class="crumbs" aria-label="Đường dẫn"><ol><li><a href="../">Trang chủ</a></li><li><a href="./">Công cụ</a></li><li aria-current="page">Tìm điểm giữa của hai bạn</li></ol></nav>
+  <header class="tool-head">
+    <p class="kicker">Công cụ miễn phí · Điểm giữa</p>
+    <h1>Tìm điểm giữa của hai bạn</h1>
+    <p class="intro">Nhập thành phố của cả hai. Chúng mình tìm điểm nằm đúng giữa hai bạn, các thành phố lớn gần đó nhất và thành phố công bằng nhất để gặp nhau.</p>
+  </header>
+
+  <section id="tool" class="tool-card" aria-label="Công cụ tìm điểm giữa">
+    <div class="fields pair">
+      <div class="field">
+        <label for="a"><span class="dot-a" aria-hidden="true"></span>Thành phố của bạn</label>
+        <div class="combo">
+          <input id="a" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="a-list" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Gõ tên thành phố" aria-describedby="a-hint">
+          <ul id="a-list" role="listbox" aria-label="Thành phố" hidden></ul>
+        </div>
+        <p class="hint" id="a-hint">Không thấy nơi bạn ở? Hãy chọn thành phố lớn gần nhất.</p>
+      </div>
+      <button type="button" class="btn-ghost swap" id="swap" aria-label="Đổi chỗ hai thành phố"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 4 3 8l4 4M3 8h13M17 12l4 4-4 4M21 16H8"/></svg></button>
+      <div class="field">
+        <label for="b"><span class="dot-b" aria-hidden="true"></span>Thành phố của người ấy</label>
+        <div class="combo">
+          <input id="b" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="b-list" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Gõ tên thành phố" aria-describedby="b-hint">
+          <ul id="b-list" role="listbox" aria-label="Thành phố" hidden></ul>
+        </div>
+        <p class="hint" id="b-hint">Gõ vài chữ cái rồi chọn trong danh sách.</p>
+      </div>
+    </div>
+    <p class="empty" id="empty" data-text="Chọn cả hai thành phố để tìm điểm giữa của hai bạn.">Chọn cả hai thành phố để tìm điểm giữa của hai bạn.</p>
+    <div class="results" id="result" hidden aria-live="polite">
+      <p class="headline" id="headline"></p>
+      <p id="where"></p>
+      <h2 id="near-title">Các thành phố lớn gần điểm giữa nhất</h2>
+      <ul class="places" id="near"></ul>
+      <h2>Thành phố công bằng nhất để gặp nhau</h2>
+      <p id="fair-why"></p>
+      <ul class="places" id="fair"></ul>
+      <p class="share-line" id="line"></p>
+      <div class="actions">
+          <button type="button" class="btn" id="copy"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg><span>Sao chép link</span></button>
+          <button type="button" class="btn-ghost" id="share" hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12M8 7l4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg><span>Chia sẻ</span></button>
+        </div>
+    </div>
+    <figure class="map"><canvas id="map" aria-hidden="true"></canvas><figcaption id="map-caption" data-text="Trái tim đánh dấu điểm giữa của hai bạn.">Trái tim đánh dấu điểm giữa của hai bạn.</figcaption></figure>
+  </section>
+
+  <article class="guide">
+    <h2>Điểm giữa được tìm thế nào</h2>
+    <p>Điểm giữa nằm trên đường ngắn nhất trên bề mặt Trái Đất giữa trung tâm hai thành phố của hai bạn, cách mỗi người một khoảng bằng nhau. Vì Trái Đất tròn, nó thường không nằm ở chỗ mà bản đồ phẳng gợi ý. Đường bay giữa các thành phố phía bắc châu Âu và Bắc Mỹ cong lên phía bắc, nên điểm giữa của chúng thường lệch về phía bắc hơn bạn nghĩ.</p>
+    <p>Phần lớn hành tinh là nước, nên rất nhiều điểm giữa rơi xuống biển. Nếu điểm của hai bạn cũng vậy, chúng mình sẽ nói thẳng và cho bạn xem các thành phố lớn gần nhất.</p>
+
+    <h2>Thành phố công bằng nhất để gặp nhau</h2>
+    <p>Điểm chính xác hiếm khi là nơi bay tới được. Vì vậy chúng mình còn xem qua một danh sách các thành phố lớn có sân bay đông đúc, rồi chọn nơi khiến chặng dài hơn trong hai chặng của hai bạn ngắn nhất có thể. Như vậy không ai phải đi trọn quãng đường. Nếu hai bạn sống gần nhau hơn, chúng mình xét mọi thành phố trong danh sách.</p>
+    <p>Khoảng cách được đo theo đường thẳng, không theo giờ bay hay giá vé. Một thành phố có chuyến bay thẳng từ cả hai phía có thể tốt hơn một nơi gần hơn một chút, nên hãy xem đường bay và giá thật trước khi đặt vé.</p>
+
+    <h2>Mẹo gặp nhau ở giữa đường</h2>
+    <ul>
+      <li><strong>So thời gian từ cửa nhà đến cửa khách sạn.</strong> Một chuyến bay thẳng dài hơn chút thường đỡ mệt hơn hai chuyến ngắn.</li>
+      <li><strong>Kiểm tra hộ chiếu của cả hai.</strong> Thành phố công bằng nhất trên bản đồ có thể cần visa với người này mà không cần với người kia.</li>
+      <li><strong>Hạ cánh gần giờ nhau.</strong> Chọn chuyến bay đến cách nhau vài tiếng thôi, để không ai phải chờ một mình ở sân bay cả ngày.</li>
+      <li><strong>Thay phiên nhau.</strong> Lần này gặp ở giữa, lần sau ở nhà người này, lần sau nữa ở nhà người kia. Chi phí và mệt mỏi sẽ được chia đều.</li>
+    </ul>
+    <p>Muốn biết toàn bộ quãng đường trước? Thử <a href="distance.html">mình cách nhau bao xa</a>, và khi đã đặt vé, hãy bắt đầu <a href="countdown.html">đếm ngược</a>.</p>
+  </article>
+
+  <section class="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Câu hỏi</h2>
+    <details><summary>Nếu điểm giữa của tụi mình nằm giữa biển thì sao?</summary><p>Chuyện này rất hay xảy ra, vì phần lớn Trái Đất là nước. Ví dụ London và New York gặp nhau ở giữa Bắc Đại Tây Dương. Khi đó chúng mình cho xem các thành phố lớn gần nhất và thành phố công bằng nhất để gặp nhau, vốn hữu ích hơn.</p></details>
+    <details><summary>Thành phố công bằng nhất được chọn thế nào?</summary><p>Từ danh sách các thành phố lớn có sân bay đông đúc, chúng mình chọn nơi mà chặng đường thẳng dài hơn trong hai chặng của hai bạn là ngắn nhất. Nếu hai bạn sống khá gần nhau, chúng mình dùng mọi thành phố trong danh sách.</p></details>
+    <details><summary>Điểm giữa có phải là nửa thời gian di chuyển không?</summary><p>Không. Đó là nửa quãng đường. Thời gian di chuyển còn tùy chuyến bay, nối chuyến và vị trí sân bay, nên nơi công bằng tính theo giờ có thể khác.</p></details>
+    <details><summary>Có chia sẻ điểm giữa của tụi mình được không?</summary><p>Được. Sao chép link tạo một đường link mở trang này với cả hai thành phố đã điền sẵn. Chúng mình không lưu gì cả: các thành phố nằm ngay trong đường link.</p></details>
+  </section>
+
+  <section class="more" aria-labelledby="more-title">
+    <h2 id="more-title">Thêm công cụ miễn phí cho hai bạn</h2>
+    <ul class="tool-grid"><li><a class="tool-link" href="distance.html"><span class="ico"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M5 17c4-9 10-9 14 0"/><circle cx="5" cy="17" r="2.2" fill="currentColor"/><circle cx="19" cy="17" r="2.2" fill="currentColor"/></svg></span><span><b>Mình cách nhau bao xa?</b><span>Khoảng cách giữa thành phố của bạn và của người ấy, tính bằng km và dặm, kèm thời gian bay ước tính.</span></span></a></li><li><a class="tool-link" href="time-zones.html"><span class="ico"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="9" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M9 9v3l2 1.5M16.5 6.6A6 6 0 0 1 16.5 17.4"/></svg></span><span><b>Lúc nào mình cùng thức?</b><span>Giờ thức của hai bạn đặt cạnh nhau dù khác múi giờ, và giờ gọi điện tốt nhất.</span></span></a></li><li><a class="tool-link" href="countdown.html"><span class="ico"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 3h10M7 21h10M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9"/></svg></span><span><b>Đếm ngược đến ngày gặp lại</b><span>Số ngày, giờ, phút và giây cho đến khi hai bạn bên nhau, kèm link để chia sẻ.</span></span></a></li></ul>
+  </section>
+
+  <section id="app" class="app-cta" aria-labelledby="app-title">
+    <img class="planet small" src="../../img/icon.png?v=20261025" alt="" width="88" height="88" loading="lazy">
+    <h2 id="app-title">Our Tiny Planet làm điều này mỗi ngày</h2>
+    <p>Kết nối Apple Health hoặc Health Connect, bước chân của bạn sẽ đưa bạn theo lộ trình thật đến thành phố của người ấy, trên một bản đồ nơi hai bạn cùng đi về phía nhau. Lên kế hoạch cho những chuyến đi mơ ước và để dành cho lần gặp tới.</p>
+    <p>Our Tiny Planet là một thế giới nhỏ để chia sẻ dành cho các cặp đôi, gần hay xa: cùng xây một ngôi nhà, cùng chơi, viết cho nhau và luôn có mặt trong ngày của nhau. Sắp có trên iPhone và Android.</p>
+    <div class="links"><a class="btn-ghost" href="../">Xem bên trong có gì</a></div>
+    <form class="waitlist" id="waitlist-app" data-source="tools-halfway" aria-labelledby="wl-title-app" novalidate>
+      <h3 class="wl-title" id="wl-title-app">Là người biết đầu tiên</h3>
+      <p class="wl-sub">Để lại email, chúng mình sẽ gửi bạn đúng một email vào ngày Our Tiny Planet ra mắt.</p>
+      <div class="wl-row">
+        <label class="wl-label" for="wl-email-app">Địa chỉ email của bạn</label>
+        <input id="wl-email-app" type="email" name="email" autocomplete="email" inputmode="email" placeholder="Email của bạn" required aria-describedby="wl-msg-app">
+        <input class="wl-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit">Báo mình</button>
+      </div>
+      <p class="wl-msg" id="wl-msg-app" role="status" aria-live="polite"></p>
+      <p class="wl-fine">Chỉ email ra mắt, sau đó chúng mình sẽ xóa. <a href="../privacy.html#waitlist">Quyền riêng tư</a></p>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <img src="../../favicon.png" alt="" width="34" height="34">
+  <p><span class="heart" aria-hidden="true">♥</span> Our Tiny Planet · làm ra cho hai bạn</p>
+  <nav aria-label="Thêm"><a href="../guides/">Cẩm nang</a><a href="./">Công cụ miễn phí</a></nav>
+  <nav aria-label="Trang web"><a href="../privacy.html">Quyền riêng tư</a><a href="../terms.html">Điều khoản</a><a href="../support.html">Hỗ trợ</a></nav>
+  <p class="small">© 2026 Our Tiny Planet</p>
+</footer>
+<script type="application/json" id="tool-text">{"ui":{"city_label":"{city}, {country}","place_in":"ở {country}","search_found":{"other":"Tìm thấy {n} thành phố. Dùng phím mũi tên để chọn."},"search_none":"Không tìm thấy thành phố. Hãy thử thành phố lớn gần nhất.","copied":"Đã sao chép link","copy_failed":"Không sao chép được: hãy sao chép từ thanh địa chỉ","send":"Gửi cho người ấy","dur_hm":"{h} giờ {m} phút","dur_h_m":"{h} {m}","coord":"{lat}° {ns}, {lon}° {ew}","north":"B","south":"N","east":"Đ","west":"T","same_city":"Đó là cùng một thành phố hai lần. Hãy chọn nơi mỗi người đang ở.","next_day":" ngày hôm sau","day_before":" ngày hôm trước","d_sub":"{other} giữa {a} và {b}, theo đường chim bay","d_fly_short_title":"Đi đường bộ nhanh hơn","d_fly_short":"Chuyến bay sẽ mất khoảng {time} trên không, nhưng tàu hỏa hay ô tô có lẽ nhanh hơn nếu tính cả thời gian ở sân bay.","d_fly_long_title":"Khoảng {time}","d_fly_long":"trên không. Xa hơn quãng đường hầu như mọi máy bay bay thẳng, nên hãy tính thêm một lần nối chuyến.","d_fly_title":"Khoảng {time}","d_fly":"bay, nếu có chuyến bay thẳng","d_same_time_title":"Cùng giờ","d_same_time":"{a} và {b} đang cùng giờ","d_ahead_title":"Nhanh hơn {gap}","d_behind_title":"Chậm hơn {gap}","d_ahead":"Giờ ở {b} đang nhanh hơn {a}.","d_behind":"Giờ ở {b} đang chậm hơn {a}.","d_plan":"Sắp xếp cuộc gọi","d_walk_title_days":{"other":"Khoảng {n} ngày"},"d_walk_title_time":"Khoảng {time}","d_walk_short":"đi bộ, với tốc độ thong thả","d_walk":"đi bộ, mỗi ngày 8 tiếng, nếu có đường đi suốt cả quãng","d_line":"{a} và {b}: cách nhau {first} ({second}).","d_share_title":"Mình cách nhau bao xa?","d_share_more":"Còn hai bạn cách nhau bao xa?","d_caption":"Lộ trình ngắn nhất trên Trái Đất từ {a} đến {b}.","h_opposite":"Hai bạn ở gần như đúng hai phía đối diện của địa cầu.","h_opposite_where":"Không có một điểm giữa duy nhất: mọi lộ trình giữa {a} và {b} đều dài gần bằng nhau, khoảng {d} mỗi phía đến một vòng điểm bao quanh địa cầu.","h_opposite_share":"Chúng mình ở hai phía đối diện của địa cầu.","h_coast":"Điểm giữa của hai bạn nằm ngay ngoài khơi, trên {water}.","h_coast_share":"Điểm giữa của tụi mình nằm ngay ngoài khơi gần {city}, cách mỗi người {d}.","h_sea":"Điểm giữa của hai bạn nằm giữa {water}.","h_sea_share":"Điểm giữa của tụi mình nằm giữa {water}, cách mỗi người {d}.","h_land_near":"Điểm giữa của hai bạn nằm {in}, gần {city}.","h_land_near_share":"Điểm giữa của tụi mình nằm gần {city}, cách mỗi người {d}.","h_land":"Điểm giữa của hai bạn nằm {in}.","h_land_share":"Điểm giữa của tụi mình nằm {in}, cách mỗi người {d}.","h_where":"Điểm này cách mỗi người {d}, ở tọa độ {coord}.","h_nearest":"Thành phố lớn gần nhất trong danh sách là {city}, cách {d}.","h_from_mid":"cách điểm giữa {d}","h_fair_hubs":"Trong các thành phố lớn có sân bay đông đúc, những nơi này giúp chặng dài hơn trong hai chặng của hai bạn ngắn nhất có thể.","h_fair_all":"Trong mọi thành phố chúng mình biết, những nơi này giúp chặng dài hơn trong hai chặng của hai bạn ngắn nhất có thể.","h_fair_detail":"{da} từ {a} · {db} từ {b}","h_fair_share":"Thành phố công bằng nhất để gặp nhau: {city}.","h_caption":"Trái tim đánh dấu điểm giữa {a} và {b}.","h_caption_opposite":"{a} và {b} ở hai phía đối diện của địa cầu.","h_share_title":"Điểm giữa của tụi mình","t_run":"từ {a1} đến {a2} với bạn, từ {b1} đến {b2} với người ấy","t_join":"; và ","t_same_clock":"Hai bạn cùng giờ, và cùng thức {gap} mỗi ngày.","t_same_clock_none":"Hai bạn cùng giờ, nhưng giờ thức của hai bạn không trùng nhau.","t_all_day":"Hai bạn cùng thức cả ngày. May mắn ghê.","t_overlap":"Hai bạn cùng thức {gap} mỗi ngày: {runs}.","t_none":"Giờ thức của hai bạn không trùng nhau vào ngày này.","t_now":"Lúc này là {ta} {da} ở {a}, và {tb} {db} ở {b}. {gap}.","t_gap_same":"{a} và {b} cùng giờ","t_gap_ahead":"Giờ ở {b} nhanh hơn {a} {gap}","t_gap_behind":"Giờ ở {b} chậm hơn {a} {gap}","t_you":"Bạn","t_them":"Người ấy","t_aria":"Một ngày ở {a} và {b}. Hai bạn cùng thức {runs}.","t_aria_none":"Một ngày ở {a} và {b}. Giờ thức của hai bạn không trùng nhau.","t_best":"{ta} với bạn, {tb}{day} với người ấy","t_best_sep":". ","t_reason":"Với bạn là {la}, với người ấy là {lb}.","t_reason_short":"Với bạn là {la}, với người ấy là {lb}, và khoảng trùng nhau chỉ dài {gap}.","t_work":"Vào ngày làm việc, giờ nghỉ trưa hoặc cuối tuần có thể hợp hơn.","t_tod_evening":"buổi tối","t_tod_early_morning":"sáng sớm","t_tod_lunch":"giờ nghỉ trưa","t_tod_work":"giờ làm việc","t_tod_early":"sớm","t_tod_late":"đêm khuya","t_no_best":"Như hiện tại, không có giờ nào hợp với cả hai.","t_try_you_late":"Nếu bạn ngủ muộn hơn {d}, hai bạn sẽ có nửa tiếng chung.","t_try_them_late":"Nếu người ấy ngủ muộn hơn {d}, hai bạn sẽ có nửa tiếng chung.","t_try_you_early":"Nếu bạn dậy sớm hơn {d}, hai bạn sẽ có nửa tiếng chung.","t_try_them_early":"Nếu người ấy dậy sớm hơn {d}, hai bạn sẽ có nửa tiếng chung.","t_conv_you":"{time}{day} với bạn (ở {city})","t_conv_them":"{time}{day} với người ấy (ở {city})","t_conv_who_you":"với bạn (ở {city}) là","t_conv_who_them":"với người ấy (ở {city}) là","t_change_forward":"Vào {date}, đồng hồ ở {city} được vặn lên và chênh lệch thay đổi: {gap} kể từ đó.","t_change_back":"Vào {date}, đồng hồ ở {city} được vặn lùi và chênh lệch thay đổi: {gap} kể từ đó.","t_steady":"{gap} quanh năm: không ai trong hai bạn đổi giờ trong năm tới.","t_share":"{a} và {b}: tụi mình cùng thức {gap} mỗi ngày. Giờ gọi tốt nhất: {best}.","t_share_none":"{a} và {b}: giờ thức của tụi mình không trùng nhau. Đến lúc gửi tin nhắn thoại rồi.","t_share_title":"Lúc nào mình cùng thức?","c_head_names":"{names}, gặp lại nhau sau","c_head":"Gặp lại nhau sau","c_done_names":"{names}, cuối cùng cũng bên nhau","c_done":"Cuối cùng cũng bên nhau","c_unit_d":{"other":"ngày"},"c_unit_h":{"other":"giờ"},"c_unit_m":{"other":"phút"},"c_unit_s":{"other":"giây"},"c_doc_title":{"other":"Còn {n} ngày · {title}"},"c_doc_done":"Cuối cùng cũng bên nhau · {title}","c_when":"{date} lúc {time} ở {city}.","c_here":"Tức là {time}, {date} ở chỗ bạn bây giờ.","c_sleeps":{"other":"Còn {n} đêm nữa."},"c_today":"Chính là hôm nay.","c_past":"Khoảnh khắc ấy đã đến. Chọn ngày tiếp theo để bắt đầu một bộ đếm ngược mới.","c_empty_city":"Chọn thành phố nơi hai bạn gặp nhau.","c_empty_date":"Chọn ngày để bắt đầu đếm ngược.","c_share":{"other":"Còn {n} đêm nữa là tụi mình gặp lại, vào {date}."},"c_share_today":"Hôm nay là ngày tụi mình gặp lại.","c_share_done":"Cuối cùng cũng bên nhau.","c_share_names":"{names}: {text}","c_share_title":"Đếm ngược đến ngày gặp lại","c_ics_summary":"Gặp lại nhau","c_ics_summary_names":"Gặp lại nhau: {names}","c_ics_desc":"Bộ đếm ngược: {url}","c_ics_alarm":"Ngày mai hai bạn gặp lại nhau","c_ics_file":"gap-lai-nhau.ics"},"countries":{"HK":"Hồng Kông","MO":"Ma Cao","MM":"Myanmar","CD":"CHDC Congo","CG":"Cộng hòa Congo","PS":"Palestine"},"countryIn":{},"waters":{"med":"Địa Trung Hải","black":"Biển Đen","caspian":"biển Caspi","red":"Biển Đỏ","gulf":"vịnh Ba Tư","arabian":"biển Ả Rập","bengal":"vịnh Bengal","scs":"Biển Đông","japan":"biển Nhật Bản","mexico":"vịnh Mexico","caribbean":"biển Caribe","north":"biển Bắc","baltic":"biển Baltic","hudson":"vịnh Hudson","tasman":"biển Tasman","atlantic_n":"Bắc Đại Tây Dương","atlantic_s":"Nam Đại Tây Dương","pacific_n":"Bắc Thái Bình Dương","pacific_s":"Nam Thái Bình Dương","indian":"Ấn Độ Dương","arctic":"Bắc Băng Dương","southern":"Nam Đại Dương"},"cities":{"ho-chi-minh-city-vn":"TP. Hồ Chí Minh","hanoi-vn":"Hà Nội","da-nang-vn":"Đà Nẵng","nha-trang-vn":"Nha Trang","hue-vn":"Huế","london-gb":"Luân Đôn","paris-fr":"Paris","moscow-ru":"Mát-xcơ-va","beijing-cn":"Bắc Kinh","shanghai-cn":"Thượng Hải","guangzhou-cn":"Quảng Châu","shenzhen-cn":"Thâm Quyến","hong-kong-hk":"Hồng Kông","macau-mo":"Ma Cao","taipei-tw":"Đài Bắc","kaohsiung-tw":"Cao Hùng","taichung-tw":"Đài Trung","tokyo-jp":"Tokyo","osaka-jp":"Osaka","seoul-kr":"Seoul","busan-kr":"Busan","pyongyang-kp":"Bình Nhưỡng","phnom-penh-kh":"Phnôm Pênh","vientiane-la":"Viêng Chăn","bangkok-th":"Bangkok","singapore-sg":"Singapore","new-york-us":"New York","washington-us":"Washington"},"cityAliases":{"ho-chi-minh-city-vn":"Sài Gòn","hanoi-vn":"Ha Noi"}}</script>
+<script src="../../tools/cities.js?v=20261104" defer></script>
+<script src="../../tools/world.js?v=20261104" defer></script>
+<script src="../../tools/common.js?v=20261104" defer></script>
+<script src="../../tools/halfway.js?v=20261104" defer></script>
+<script src="../../site.js?v=20261028" defer></script>
+<script type="application/json" id="wl-text">{"invalid": "Có vẻ đó không phải địa chỉ email. Bạn kiểm tra lại giúp nhé?", "sending": "Đang gửi…", "already_lead": "Bạn đã có tên trong danh sách rồi.", "already": "Chúng mình sẽ gửi email cho bạn vào ngày ứng dụng ra mắt.", "added_lead": "Bạn đã có tên trong danh sách!", "added": "Chúng mình sẽ gửi email cho bạn vào ngày ứng dụng ra mắt.", "later": "Bạn đã thử nhiều lần quá. Hãy đợi một lát rồi thử lại nhé.", "error": "Đã có lỗi xảy ra. Hãy thử lại sau một phút.", "offline": "Chúng mình không kết nối được máy chủ. Hãy kiểm tra kết nối rồi thử lại."}</script>
+<script src="../../waitlist.js?v=3" defer></script>
+</body>
+</html>
