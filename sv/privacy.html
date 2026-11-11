@@ -159,13 +159,12 @@
 <li><strong>Supabase</strong>: driftar vår databas, fillagring (för foton och röstmeddelanden), inloggning, liveuppdateringar mellan era telefoner och säkerhetskopior, i London.</li>
 <li><strong>Google Firebase Cloud Messaging</strong> och <strong>Apple Push Notification service</strong>: levererar aviseringar till din telefon.</li>
 <li><strong>Google</strong> och <strong>Apple</strong>: om du väljer att logga in med dem.</li>
-<li><strong>Open-Meteo</strong>: tillhandahåller vädret i Väderfönstret. Tjänsten får bara den avrundade platsen, inte vem du är.</li>
+<li><strong>MET Norway</strong> (Norska meteorologiska institutet, api.met.no): tillhandahåller vädret i Väderfönstret och reseprognosen i Fyren. Din telefon frågar direkt, så tjänsten får telefonens internetadress och en ungefärlig plats (din avrundade plats eller staden du valde för en resa), inte vem du är.</li>
 <li><strong>RevenueCat</strong>, <strong>Apple</strong> och <strong>Google</strong>: för köp. RevenueCat får ditt konto-ID och din köphistorik så att köp kan bekräftas.</li>
 <li><strong>Resend</strong>: skickar våra mejl, även inloggningsmejl (till exempel för att återställa lösenordet) och väntelistans mejl från webbplatsen. Tjänsten får din e-postadress och mejlet vi skickar till dig. Våra mejl visar en liten bild från vår egen lagring, så när du öppnar ett mejl får vår lagring veta att mejlet öppnades, precis som när du öppnar vilken webbsida som helst, men inte vem du är.</li>
 <li><strong>Cloudflare</strong> och <strong>Google (Gmail)</strong>: Cloudflare driver vår domän och vidarebefordrar mejl som skickas till hello@ourtinyplanet.com till en Gmail-brevlåda, där vi läser och besvarar dem.</li>
 <li><strong>GitHub Pages</strong>: driftar den här webbplatsen. Som alla webbhotell ser det varje besökares internetadress i sina loggar. Själva appen pratar aldrig med det.</li>
 <li><strong>Wikidata</strong> och <strong>Wikipedia</strong>: filmuppgifterna i Filmkväll (titlar, årtal, sammanfattningar) kommer därifrån. Vår server hämtar dem; din telefon kontaktar dem aldrig, och de får inte veta något om dig.</li>
-<li><strong>Nager.Date</strong> (date.nager.at): när du tittar på helgdagar i Fyren frågar telefonen den här kostnadsfria, öppna tjänsten om ett lands helgdagar. Den får landet och telefonens internetadress, inte vem du är.</li>
 <li>Taligenkänning från <strong>Apple</strong> och <strong>Google</strong>: när du säger ett ord högt i skolan och telefonen inte kan känna igen det på själva enheten kan Apple (på iPhone) eller Google (på Android) behandla ljudet för att göra om det till text, enligt sina egna integritetsvillkor. Vi tar aldrig emot det ljudet.</li>
 </ul>
 <p>Vi kan också dela information om lagen kräver det, till exempel när vi anmäler sexuella övergrepp mot barn till brittiska National Crime Agency, eller med polis eller räddningstjänst när någons liv eller säkerhet är i fara. Vi delar bara det som behövs.</p>
